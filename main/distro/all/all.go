@@ -53,6 +53,7 @@ import (
 	_ "github.com/xmplusdev/xray-core/transport/internet/domainsocket"
 	_ "github.com/xmplusdev/xray-core/transport/internet/grpc"
 	_ "github.com/xmplusdev/xray-core/transport/internet/http"
+	_ "github.com/xmplusdev/xray-core/transport/internet/httpupgrade"
 	_ "github.com/xmplusdev/xray-core/transport/internet/kcp"
 	_ "github.com/xmplusdev/xray-core/transport/internet/quic"
 	_ "github.com/xmplusdev/xray-core/transport/internet/reality"
