@@ -5,8 +5,8 @@ import (
 	"encoding/hex"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/proxy/wireguard"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/proxy/wireguard"
 	"google.golang.org/protobuf/proto"
 )
 

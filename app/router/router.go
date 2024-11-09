@@ -5,14 +5,14 @@ import (
 	sync "sync"
 	"sort"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/serial"
-	"github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/features/dns"
-	"github.com/xmplusdev/xray-core/features/outbound"
-	"github.com/xmplusdev/xray-core/features/routing"
-	routing_dns "github.com/xmplusdev/xray-core/features/routing/dns"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/serial"
+	"github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/features/dns"
+	"github.com/xmplusdev/xray-core/v24/features/outbound"
+	"github.com/xmplusdev/xray-core/v24/features/routing"
+	routing_dns "github.com/xmplusdev/xray-core/v24/features/routing/dns"
 )
 
 // Router is an implementation of routing.Router.

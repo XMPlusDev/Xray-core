@@ -1,10 +1,10 @@
 package dns
 
 import (
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/strmatcher"
-	"github.com/xmplusdev/xray-core/common/uuid"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/strmatcher"
+	"github.com/xmplusdev/xray-core/v24/common/uuid"
 )
 
 var typeMap = map[DomainMatchingType]strmatcher.Type{

@@ -5,11 +5,11 @@ import (
 	"io"
 	"net"
 
-	"github.com/xmplusdev/xray-core/common/buf"
-	"github.com/xmplusdev/xray-core/common/errors"
-	xnet "github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/net/cnc"
-	"github.com/xmplusdev/xray-core/common/signal/done"
+	"github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	xnet "github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/net/cnc"
+	"github.com/xmplusdev/xray-core/v24/common/signal/done"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/peer"
 )

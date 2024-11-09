@@ -4,12 +4,12 @@ import (
 	"context"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/session"
-	"github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/features/dns"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/session"
+	"github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/features/dns"
 )
 
 // newFakeDNSSniffer Creates a Fake DNS metadata sniffer

@@ -3,9 +3,9 @@ package inbound
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/features"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/features"
 )
 
 // Handler is the interface for handlers that process inbound connections.

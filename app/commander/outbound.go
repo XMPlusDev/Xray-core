@@ -4,12 +4,12 @@ import (
 	"context"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/net/cnc"
-	"github.com/xmplusdev/xray-core/common/signal/done"
-	"github.com/xmplusdev/xray-core/transport"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/net/cnc"
+	"github.com/xmplusdev/xray-core/v24/common/signal/done"
+	"github.com/xmplusdev/xray-core/v24/transport"
 )
 
 // OutboundListener is a net.Listener for listening gRPC connections.

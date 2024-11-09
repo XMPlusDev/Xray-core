@@ -3,7 +3,7 @@ package kcp_test
 import (
 	"testing"
 
-	. "github.com/xmplusdev/xray-core/transport/internet/kcp"
+	. "github.com/xmplusdev/xray-core/v24/transport/internet/kcp"
 )
 
 func TestKCPPacketReader(t *testing.T) {

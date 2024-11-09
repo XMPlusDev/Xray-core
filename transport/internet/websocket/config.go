@@ -3,8 +3,8 @@ package websocket
 import (
 	"net/http"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/transport/internet"
 )
 
 func (c *Config) GetNormalizedPath() string {

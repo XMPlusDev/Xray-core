@@ -3,9 +3,9 @@ package routing
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/features"
-	"github.com/xmplusdev/xray-core/transport"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/features"
+	"github.com/xmplusdev/xray-core/v24/transport"
 )
 
 // Dispatcher is a feature that dispatches inbound requests to outbound handlers based on rules.

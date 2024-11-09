@@ -5,7 +5,7 @@ import (
 	"testing"
 	_ "unsafe"
 
-	. "github.com/xmplusdev/xray-core/core"
+	. "github.com/xmplusdev/xray-core/v24/core"
 )
 
 func TestFromContextPanic(t *testing.T) {

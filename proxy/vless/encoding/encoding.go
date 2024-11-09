@@ -5,15 +5,15 @@ import (
 	"context"
 	"io"
 
-	"github.com/xmplusdev/xray-core/common/buf"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/protocol"
-	"github.com/xmplusdev/xray-core/common/session"
-	"github.com/xmplusdev/xray-core/common/signal"
-	"github.com/xmplusdev/xray-core/features/stats"
-	"github.com/xmplusdev/xray-core/proxy"
-	"github.com/xmplusdev/xray-core/proxy/vless"
+	"github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/protocol"
+	"github.com/xmplusdev/xray-core/v24/common/session"
+	"github.com/xmplusdev/xray-core/v24/common/signal"
+	"github.com/xmplusdev/xray-core/v24/features/stats"
+	"github.com/xmplusdev/xray-core/v24/proxy"
+	"github.com/xmplusdev/xray-core/v24/proxy/vless"
 )
 
 const (

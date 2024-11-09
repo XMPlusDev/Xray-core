@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/xmplusdev/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
 )
 
 type muxResource struct {

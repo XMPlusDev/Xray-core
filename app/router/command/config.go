@@ -3,8 +3,8 @@ package command
 import (
 	"strings"
 
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/features/routing"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/features/routing"
 )
 
 // routingContext is an wrapper of protobuf RoutingContext as implementation of routing.Context and routing.Route.

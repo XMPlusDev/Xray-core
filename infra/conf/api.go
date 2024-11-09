@@ -3,14 +3,14 @@ package conf
 import (
 	"strings"
 
-	"github.com/xmplusdev/xray-core/app/commander"
-	loggerservice "github.com/xmplusdev/xray-core/app/log/command"
-	observatoryservice "github.com/xmplusdev/xray-core/app/observatory/command"
-	handlerservice "github.com/xmplusdev/xray-core/app/proxyman/command"
-	routerservice "github.com/xmplusdev/xray-core/app/router/command"
-	statsservice "github.com/xmplusdev/xray-core/app/stats/command"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/serial"
+	"github.com/xmplusdev/xray-core/v24/app/commander"
+	loggerservice "github.com/xmplusdev/xray-core/v24/app/log/command"
+	observatoryservice "github.com/xmplusdev/xray-core/v24/app/observatory/command"
+	handlerservice "github.com/xmplusdev/xray-core/v24/app/proxyman/command"
+	routerservice "github.com/xmplusdev/xray-core/v24/app/router/command"
+	statsservice "github.com/xmplusdev/xray-core/v24/app/stats/command"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/serial"
 )
 
 type APIConfig struct {

@@ -1,9 +1,9 @@
 package routing
 
 import (
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/serial"
-	"github.com/xmplusdev/xray-core/features"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/serial"
+	"github.com/xmplusdev/xray-core/v24/features"
 )
 
 // Router is a feature to choose an outbound tag for the given request.

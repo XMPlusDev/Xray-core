@@ -4,13 +4,13 @@ import (
 	"context"
 	"io"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/cmdarg"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/infra/conf"
-	"github.com/xmplusdev/xray-core/infra/conf/serial"
-	"github.com/xmplusdev/xray-core/main/confloader"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/cmdarg"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/infra/conf"
+	"github.com/xmplusdev/xray-core/v24/infra/conf/serial"
+	"github.com/xmplusdev/xray-core/v24/main/confloader"
 )
 
 func init() {

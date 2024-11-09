@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/xtls/reality"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/transport/internet"
 )
 
 func (c *Config) GetREALITYConfig() *reality.Config {

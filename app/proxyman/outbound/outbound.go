@@ -6,11 +6,11 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/app/proxyman"
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/features/outbound"
+	"github.com/xmplusdev/xray-core/v24/app/proxyman"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/features/outbound"
 )
 
 // Manager is to manage all outbound handlers.

@@ -3,9 +3,9 @@ package protocol
 import (
 	"runtime"
 
-	"github.com/xmplusdev/xray-core/common/bitmask"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/uuid"
+	"github.com/xmplusdev/xray-core/v24/common/bitmask"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/uuid"
 	"golang.org/x/sys/cpu"
 )
 

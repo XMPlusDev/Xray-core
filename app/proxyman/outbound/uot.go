@@ -5,10 +5,10 @@ import (
 	"os"
 
 	"github.com/sagernet/sing/common/uot"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/transport/internet"
-	"github.com/xmplusdev/xray-core/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/transport/internet"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
 )
 
 func (h *Handler) getUoTConnection(ctx context.Context, dest net.Destination) (stat.Connection, error) {

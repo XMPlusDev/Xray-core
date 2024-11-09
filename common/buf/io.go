@@ -8,9 +8,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/features/stats"
-	"github.com/xmplusdev/xray-core/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/features/stats"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
 )
 
 // Reader extends io.Reader with MultiBuffer.

@@ -6,14 +6,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/buf"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/protocol/udp"
-	"github.com/xmplusdev/xray-core/features/routing"
-	"github.com/xmplusdev/xray-core/transport"
-	. "github.com/xmplusdev/xray-core/transport/internet/udp"
-	"github.com/xmplusdev/xray-core/transport/pipe"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/protocol/udp"
+	"github.com/xmplusdev/xray-core/v24/features/routing"
+	"github.com/xmplusdev/xray-core/v24/transport"
+	. "github.com/xmplusdev/xray-core/v24/transport/internet/udp"
+	"github.com/xmplusdev/xray-core/v24/transport/pipe"
 )
 
 type TestDispatcher struct {

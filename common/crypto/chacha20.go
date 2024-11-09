@@ -3,7 +3,7 @@ package crypto
 import (
 	"crypto/cipher"
 
-	"github.com/xmplusdev/xray-core/common/crypto/internal"
+	"github.com/xmplusdev/xray-core/v24/common/crypto/internal"
 )
 
 // NewChaCha20Stream creates a new Chacha20 encryption/descryption stream based on give key and IV.

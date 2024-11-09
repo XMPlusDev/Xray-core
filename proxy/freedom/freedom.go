@@ -8,25 +8,25 @@ import (
 	"time"
 
 	"github.com/pires/go-proxyproto"
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/buf"
-	"github.com/xmplusdev/xray-core/common/dice"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/platform"
-	"github.com/xmplusdev/xray-core/common/retry"
-	"github.com/xmplusdev/xray-core/common/session"
-	"github.com/xmplusdev/xray-core/common/signal"
-	"github.com/xmplusdev/xray-core/common/task"
-	"github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/features/dns"
-	"github.com/xmplusdev/xray-core/features/policy"
-	"github.com/xmplusdev/xray-core/features/stats"
-	"github.com/xmplusdev/xray-core/proxy"
-	"github.com/xmplusdev/xray-core/transport"
-	"github.com/xmplusdev/xray-core/transport/internet"
-	"github.com/xmplusdev/xray-core/transport/internet/stat"
-	"github.com/xmplusdev/xray-core/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v24/common/dice"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/platform"
+	"github.com/xmplusdev/xray-core/v24/common/retry"
+	"github.com/xmplusdev/xray-core/v24/common/session"
+	"github.com/xmplusdev/xray-core/v24/common/signal"
+	"github.com/xmplusdev/xray-core/v24/common/task"
+	"github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/features/dns"
+	"github.com/xmplusdev/xray-core/v24/features/policy"
+	"github.com/xmplusdev/xray-core/v24/features/stats"
+	"github.com/xmplusdev/xray-core/v24/proxy"
+	"github.com/xmplusdev/xray-core/v24/transport"
+	"github.com/xmplusdev/xray-core/v24/transport/internet"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/tls"
 )
 
 var useSplice bool
@@ -506,7 +506,7 @@ func (f *FragmentWriter) Write(b []byte) (int, error) {
 	}
 }
 
-// stolen from github.com/xmplusdev/xray-core/transport/internet/reality
+// stolen from github.com/xmplusdev/xray-core/v24/transport/internet/reality
 func randBetween(left int64, right int64) int64 {
 	if left == right {
 		return left

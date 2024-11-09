@@ -7,13 +7,13 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	http_proto "github.com/xmplusdev/xray-core/common/protocol/http"
-	"github.com/xmplusdev/xray-core/transport/internet"
-	"github.com/xmplusdev/xray-core/transport/internet/stat"
-	v2tls "github.com/xmplusdev/xray-core/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	http_proto "github.com/xmplusdev/xray-core/v24/common/protocol/http"
+	"github.com/xmplusdev/xray-core/v24/transport/internet"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
+	v2tls "github.com/xmplusdev/xray-core/v24/transport/internet/tls"
 )
 
 type server struct {

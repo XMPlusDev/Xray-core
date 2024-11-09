@@ -3,17 +3,17 @@ package internet
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/dice"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/net/cnc"
-	"github.com/xmplusdev/xray-core/common/session"
-	"github.com/xmplusdev/xray-core/features/dns"
-	"github.com/xmplusdev/xray-core/features/outbound"
-	"github.com/xmplusdev/xray-core/transport"
-	"github.com/xmplusdev/xray-core/transport/internet/stat"
-	"github.com/xmplusdev/xray-core/transport/pipe"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/dice"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/net/cnc"
+	"github.com/xmplusdev/xray-core/v24/common/session"
+	"github.com/xmplusdev/xray-core/v24/features/dns"
+	"github.com/xmplusdev/xray-core/v24/features/outbound"
+	"github.com/xmplusdev/xray-core/v24/transport"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v24/transport/pipe"
 )
 
 // Dialer is the interface for dialing outbound connections.

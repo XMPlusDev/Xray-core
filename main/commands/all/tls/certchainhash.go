@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/xmplusdev/xray-core/main/commands/base"
-	"github.com/xmplusdev/xray-core/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v24/main/commands/base"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/tls"
 )
 
 var cmdCertChainHash = &base.Command{

@@ -9,14 +9,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/app/dispatcher"
-	"github.com/xmplusdev/xray-core/app/proxyman"
-	"github.com/xmplusdev/xray-core/app/stats"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/serial"
-	core "github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/v24/app/dispatcher"
+	"github.com/xmplusdev/xray-core/v24/app/proxyman"
+	"github.com/xmplusdev/xray-core/v24/app/stats"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/serial"
+	core "github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/transport/internet"
 )
 
 var (

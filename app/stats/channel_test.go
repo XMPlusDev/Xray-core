@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/xmplusdev/xray-core/app/stats"
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/features/stats"
+	. "github.com/xmplusdev/xray-core/v24/app/stats"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/features/stats"
 )
 
 func TestStatsChannel(t *testing.T) {

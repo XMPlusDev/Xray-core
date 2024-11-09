@@ -8,9 +8,9 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xmplusdev/xray-core/common"
-	. "github.com/xmplusdev/xray-core/common/buf"
-	"github.com/xmplusdev/xray-core/transport/pipe"
+	"github.com/xmplusdev/xray-core/v24/common"
+	. "github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v24/transport/pipe"
 )
 
 func TestWriter(t *testing.T) {

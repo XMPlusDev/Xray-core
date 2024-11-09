@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	. "github.com/xmplusdev/xray-core/common"
+	. "github.com/xmplusdev/xray-core/v24/common"
 )
 
 func TestMust(t *testing.T) {

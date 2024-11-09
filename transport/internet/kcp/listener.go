@@ -6,14 +6,14 @@ import (
 	gotls "crypto/tls"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/buf"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/transport/internet"
-	"github.com/xmplusdev/xray-core/transport/internet/stat"
-	"github.com/xmplusdev/xray-core/transport/internet/tls"
-	"github.com/xmplusdev/xray-core/transport/internet/udp"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/transport/internet"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/udp"
 )
 
 type ConnectionID struct {

@@ -12,16 +12,16 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xmplusdev/xray-core/app/proxyman"
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/buf"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/serial"
-	"github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/proxy/freedom"
-	v2http "github.com/xmplusdev/xray-core/proxy/http"
-	v2httptest "github.com/xmplusdev/xray-core/testing/servers/http"
-	"github.com/xmplusdev/xray-core/testing/servers/tcp"
+	"github.com/xmplusdev/xray-core/v24/app/proxyman"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/serial"
+	"github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/proxy/freedom"
+	v2http "github.com/xmplusdev/xray-core/v24/proxy/http"
+	v2httptest "github.com/xmplusdev/xray-core/v24/testing/servers/http"
+	"github.com/xmplusdev/xray-core/v24/testing/servers/tcp"
 )
 
 func TestHttpConformance(t *testing.T) {

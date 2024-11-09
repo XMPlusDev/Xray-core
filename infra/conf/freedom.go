@@ -5,10 +5,10 @@ import (
 	"net"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/common/errors"
-	v2net "github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/protocol"
-	"github.com/xmplusdev/xray-core/proxy/freedom"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	v2net "github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/protocol"
+	"github.com/xmplusdev/xray-core/v24/proxy/freedom"
 	"google.golang.org/protobuf/proto"
 )
 

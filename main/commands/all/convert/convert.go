@@ -1,7 +1,7 @@
 package convert
 
 import (
-	"github.com/xmplusdev/xray-core/main/commands/base"
+	"github.com/xmplusdev/xray-core/v24/main/commands/base"
 )
 
 // CmdConvert do config convertion

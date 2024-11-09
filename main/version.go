@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/main/commands/base"
+	"github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/main/commands/base"
 )
 
 var cmdVersion = &base.Command{

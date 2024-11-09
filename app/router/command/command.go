@@ -4,11 +4,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/features/routing"
-	"github.com/xmplusdev/xray-core/features/stats"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/features/routing"
+	"github.com/xmplusdev/xray-core/v24/features/stats"
 	"google.golang.org/grpc"
 )
 

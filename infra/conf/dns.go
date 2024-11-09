@@ -5,10 +5,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/app/dns"
-	"github.com/xmplusdev/xray-core/app/router"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
+	"github.com/xmplusdev/xray-core/v24/app/dns"
+	"github.com/xmplusdev/xray-core/v24/app/router"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
 )
 
 type NameServerConfig struct {

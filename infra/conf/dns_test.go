@@ -6,13 +6,13 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/xmplusdev/xray-core/app/dns"
-	"github.com/xmplusdev/xray-core/app/router"
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/platform"
-	"github.com/xmplusdev/xray-core/common/platform/filesystem"
-	. "github.com/xmplusdev/xray-core/infra/conf"
+	"github.com/xmplusdev/xray-core/v24/app/dns"
+	"github.com/xmplusdev/xray-core/v24/app/router"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/platform"
+	"github.com/xmplusdev/xray-core/v24/common/platform/filesystem"
+	. "github.com/xmplusdev/xray-core/v24/infra/conf"
 	"google.golang.org/protobuf/proto"
 )
 

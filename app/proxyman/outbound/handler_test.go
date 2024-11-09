@@ -8,17 +8,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xmplusdev/xray-core/app/policy"
-	"github.com/xmplusdev/xray-core/app/proxyman"
-	. "github.com/xmplusdev/xray-core/app/proxyman/outbound"
-	"github.com/xmplusdev/xray-core/app/stats"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/serial"
-	"github.com/xmplusdev/xray-core/common/session"
-	core "github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/features/outbound"
-	"github.com/xmplusdev/xray-core/proxy/freedom"
-	"github.com/xmplusdev/xray-core/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v24/app/policy"
+	"github.com/xmplusdev/xray-core/v24/app/proxyman"
+	. "github.com/xmplusdev/xray-core/v24/app/proxyman/outbound"
+	"github.com/xmplusdev/xray-core/v24/app/stats"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/serial"
+	"github.com/xmplusdev/xray-core/v24/common/session"
+	core "github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/features/outbound"
+	"github.com/xmplusdev/xray-core/v24/proxy/freedom"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
 )
 
 func TestInterfaces(t *testing.T) {

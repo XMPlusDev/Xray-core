@@ -8,7 +8,7 @@ import (
 	"io"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
 )
 
 type Packet struct {

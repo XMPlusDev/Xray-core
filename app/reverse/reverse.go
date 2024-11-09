@@ -3,12 +3,12 @@ package reverse
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	core "github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/features/outbound"
-	"github.com/xmplusdev/xray-core/features/routing"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	core "github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/features/outbound"
+	"github.com/xmplusdev/xray-core/v24/features/routing"
 )
 
 const (

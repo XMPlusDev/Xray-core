@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xmplusdev/xray-core/infra/conf/cfgcommon/duration"
+	"github.com/xmplusdev/xray-core/v24/infra/conf/cfgcommon/duration"
 )
 
 type testWithDuration struct {

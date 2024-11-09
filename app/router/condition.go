@@ -4,10 +4,10 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/strmatcher"
-	"github.com/xmplusdev/xray-core/features/routing"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/strmatcher"
+	"github.com/xmplusdev/xray-core/v24/features/routing"
 )
 
 type Condition interface {

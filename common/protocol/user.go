@@ -1,8 +1,8 @@
 package protocol
 
 import (
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/serial"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/serial"
 )
 
 func (u *User) GetTypedAccount() (Account, error) {

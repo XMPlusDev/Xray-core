@@ -1,16 +1,16 @@
 // Package session provides functions for sessions of incoming requests.
-package session // import "github.com/xmplusdev/xray-core/common/session"
+package session // import "github.com/xmplusdev/xray-core/v24/common/session"
 
 import (
 	"context"
 	"math/rand"
 	"sync"
 
-	c "github.com/xmplusdev/xray-core/common/ctx"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/protocol"
-	"github.com/xmplusdev/xray-core/common/signal"
+	c "github.com/xmplusdev/xray-core/v24/common/ctx"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/protocol"
+	"github.com/xmplusdev/xray-core/v24/common/signal"
 )
 
 // NewID generates a new ID. The generated ID is high likely to be unique, but not cryptographically secure.

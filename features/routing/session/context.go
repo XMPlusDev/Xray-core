@@ -3,9 +3,9 @@ package session
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/common/session"
-	"github.com/xmplusdev/xray-core/features/routing"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/common/session"
+	"github.com/xmplusdev/xray-core/v24/features/routing"
 )
 
 // Context is an implementation of routing.Context, which is a wrapper of context.context with session info.

@@ -4,9 +4,9 @@ import (
 	"context"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/features/stats"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/features/stats"
 )
 
 // Manager is an implementation of stats.Manager.

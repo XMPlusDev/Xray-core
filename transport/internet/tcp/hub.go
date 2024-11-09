@@ -7,13 +7,13 @@ import (
 	"time"
 
 	goreality "github.com/xtls/reality"
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/net"
-	"github.com/xmplusdev/xray-core/transport/internet"
-	"github.com/xmplusdev/xray-core/transport/internet/reality"
-	"github.com/xmplusdev/xray-core/transport/internet/stat"
-	"github.com/xmplusdev/xray-core/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
+	"github.com/xmplusdev/xray-core/v24/transport/internet"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/reality"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v24/transport/internet/tls"
 )
 
 // Listener is an internet.Listener that listens for TCP connections.

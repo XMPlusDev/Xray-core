@@ -1,8 +1,8 @@
 package api
 
 import (
-	handlerService "github.com/xmplusdev/xray-core/app/proxyman/command"
-	"github.com/xmplusdev/xray-core/main/commands/base"
+	handlerService "github.com/xmplusdev/xray-core/v24/app/proxyman/command"
+	"github.com/xmplusdev/xray-core/v24/main/commands/base"
 )
 
 var cmdInboundUserCount = &base.Command{

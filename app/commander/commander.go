@@ -5,11 +5,11 @@ import (
 	"net"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/common"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/signal/done"
-	core "github.com/xmplusdev/xray-core/core"
-	"github.com/xmplusdev/xray-core/features/outbound"
+	"github.com/xmplusdev/xray-core/v24/common"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/signal/done"
+	core "github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v24/features/outbound"
 	"google.golang.org/grpc"
 )
 

@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xmplusdev/xray-core/common/buf"
-	"github.com/xmplusdev/xray-core/common/errors"
-	"github.com/xmplusdev/xray-core/common/platform/ctlcmd"
-	"github.com/xmplusdev/xray-core/main/confloader"
+	"github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/platform/ctlcmd"
+	"github.com/xmplusdev/xray-core/v24/main/confloader"
 )
 
 func ConfigLoader(arg string) (out io.Reader, err error) {

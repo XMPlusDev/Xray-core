@@ -1,6 +1,6 @@
 package conf
 
-import "github.com/xmplusdev/xray-core/common/errors"
+import "github.com/xmplusdev/xray-core/v24/common/errors"
 
 type ConfigureFilePostProcessingStage interface {
 	Process(conf *Config) error
