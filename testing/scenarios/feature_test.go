@@ -8,30 +8,30 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xtls/xray-core/app/dispatcher"
-	"github.com/xtls/xray-core/app/log"
-	"github.com/xtls/xray-core/app/proxyman"
-	_ "github.com/xtls/xray-core/app/proxyman/inbound"
-	_ "github.com/xtls/xray-core/app/proxyman/outbound"
-	"github.com/xtls/xray-core/app/router"
-	"github.com/xtls/xray-core/common"
-	clog "github.com/xtls/xray-core/common/log"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/common/uuid"
-	core "github.com/xtls/xray-core/core"
-	"github.com/xtls/xray-core/proxy/blackhole"
-	"github.com/xtls/xray-core/proxy/dokodemo"
-	"github.com/xtls/xray-core/proxy/freedom"
-	v2http "github.com/xtls/xray-core/proxy/http"
-	"github.com/xtls/xray-core/proxy/socks"
-	"github.com/xtls/xray-core/proxy/vmess"
-	"github.com/xtls/xray-core/proxy/vmess/inbound"
-	"github.com/xtls/xray-core/proxy/vmess/outbound"
-	"github.com/xtls/xray-core/testing/servers/tcp"
-	"github.com/xtls/xray-core/testing/servers/udp"
-	"github.com/xtls/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/app/dispatcher"
+	"github.com/xmplusdev/xray-core/app/log"
+	"github.com/xmplusdev/xray-core/app/proxyman"
+	_ "github.com/xmplusdev/xray-core/app/proxyman/inbound"
+	_ "github.com/xmplusdev/xray-core/app/proxyman/outbound"
+	"github.com/xmplusdev/xray-core/app/router"
+	"github.com/xmplusdev/xray-core/common"
+	clog "github.com/xmplusdev/xray-core/common/log"
+	"github.com/xmplusdev/xray-core/common/net"
+	"github.com/xmplusdev/xray-core/common/protocol"
+	"github.com/xmplusdev/xray-core/common/serial"
+	"github.com/xmplusdev/xray-core/common/uuid"
+	core "github.com/xmplusdev/xray-core/core"
+	"github.com/xmplusdev/xray-core/proxy/blackhole"
+	"github.com/xmplusdev/xray-core/proxy/dokodemo"
+	"github.com/xmplusdev/xray-core/proxy/freedom"
+	v2http "github.com/xmplusdev/xray-core/proxy/http"
+	"github.com/xmplusdev/xray-core/proxy/socks"
+	"github.com/xmplusdev/xray-core/proxy/vmess"
+	"github.com/xmplusdev/xray-core/proxy/vmess/inbound"
+	"github.com/xmplusdev/xray-core/proxy/vmess/outbound"
+	"github.com/xmplusdev/xray-core/testing/servers/tcp"
+	"github.com/xmplusdev/xray-core/testing/servers/udp"
+	"github.com/xmplusdev/xray-core/transport/internet"
 	xproxy "golang.org/x/net/proxy"
 )
 
@@ -53,8 +53,8 @@ func TestPassiveConnection(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -161,8 +161,8 @@ func TestProxy(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -299,8 +299,8 @@ func TestProxyOverKCP(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -386,8 +386,8 @@ func TestBlackhole(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -397,8 +397,8 @@ func TestBlackhole(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest2.Address),
-					Port:     uint32(dest2.Port),
+					Address: net.NewIPOrDomain(dest2.Address),
+					Port:    uint32(dest2.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -512,8 +512,8 @@ func TestUDPConnection(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_UDP},
 				}),
 			},
@@ -556,8 +556,8 @@ func TestDomainSniffing(t *testing.T) {
 					},
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(net.LocalHostIP),
-					Port:     443,
+					Address: net.NewIPOrDomain(net.LocalHostIP),
+					Port:    443,
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},

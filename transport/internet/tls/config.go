@@ -1,7 +1,6 @@
 package tls
 
 import (
-	"bytes"
 	"context"
 	"crypto/hmac"
 	"crypto/tls"
@@ -11,13 +10,14 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"bytes"
 
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/ocsp"
-	"github.com/xtls/xray-core/common/platform/filesystem"
-	"github.com/xtls/xray-core/common/protocol/tls/cert"
-	"github.com/xtls/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/common/net"
+	"github.com/xmplusdev/xray-core/common/ocsp"
+	"github.com/xmplusdev/xray-core/common/platform/filesystem"
+	"github.com/xmplusdev/xray-core/common/protocol/tls/cert"
+	"github.com/xmplusdev/xray-core/transport/internet"
 )
 
 var globalSessionCache = tls.NewLRUClientSessionCache(128)
@@ -70,7 +70,7 @@ func (c *Config) BuildCertificates() []*tls.Certificate {
 			continue
 		}
 		index := len(certs) - 1
-		setupOcspTicker(entry, func(isReloaded, isOcspstapling bool) {
+		setupOcspTicker(entry, func(isReloaded, isOcspstapling bool){
 			cert := certs[index]
 			if isReloaded {
 				if newKeyPair := getX509KeyPair(); newKeyPair != nil {
@@ -162,7 +162,7 @@ func (c *Config) getCustomCA() []*Certificate {
 	for _, certificate := range c.Certificate {
 		if certificate.Usage == Certificate_AUTHORITY_ISSUE {
 			certs = append(certs, certificate)
-			setupOcspTicker(certificate, func(isReloaded, isOcspstapling bool) {})
+			setupOcspTicker(certificate, func(isReloaded, isOcspstapling bool){ })
 		}
 	}
 	return certs

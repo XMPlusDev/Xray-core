@@ -7,9 +7,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/log"
+	"github.com/xmplusdev/xray-core/common"
+	"github.com/xmplusdev/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/common/log"
 )
 
 // Instance is a log.Handler that handles logs.
@@ -31,8 +31,8 @@ func New(ctx context.Context, config *Config) (*Instance, error) {
 	}
 	log.RegisterHandler(g)
 
-	// start logger now,
-	// then other modules will be able to log during initialization
+	// Start logger instantly on initialization
+	// Other modules would log during initialization
 	if err := g.startInternal(); err != nil {
 		return nil, err
 	}

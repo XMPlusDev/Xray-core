@@ -1,1 +1,1 @@
-package protocol // import "github.com/xtls/xray-core/common/protocol"
+package protocol // import "github.com/xmplusdev/xray-core/common/protocol"

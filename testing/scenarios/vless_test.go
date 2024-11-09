@@ -6,26 +6,26 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xtls/xray-core/app/log"
-	"github.com/xtls/xray-core/app/proxyman"
-	"github.com/xtls/xray-core/common"
-	clog "github.com/xtls/xray-core/common/log"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/common/protocol/tls/cert"
-	"github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/common/uuid"
-	core "github.com/xtls/xray-core/core"
-	"github.com/xtls/xray-core/proxy/dokodemo"
-	"github.com/xtls/xray-core/proxy/freedom"
-	"github.com/xtls/xray-core/proxy/vless"
-	"github.com/xtls/xray-core/proxy/vless/inbound"
-	"github.com/xtls/xray-core/proxy/vless/outbound"
-	"github.com/xtls/xray-core/testing/servers/tcp"
-	"github.com/xtls/xray-core/transport/internet"
-	"github.com/xtls/xray-core/transport/internet/reality"
-	transtcp "github.com/xtls/xray-core/transport/internet/tcp"
-	"github.com/xtls/xray-core/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/app/log"
+	"github.com/xmplusdev/xray-core/app/proxyman"
+	"github.com/xmplusdev/xray-core/common"
+	clog "github.com/xmplusdev/xray-core/common/log"
+	"github.com/xmplusdev/xray-core/common/net"
+	"github.com/xmplusdev/xray-core/common/protocol"
+	"github.com/xmplusdev/xray-core/common/protocol/tls/cert"
+	"github.com/xmplusdev/xray-core/common/serial"
+	"github.com/xmplusdev/xray-core/common/uuid"
+	core "github.com/xmplusdev/xray-core/core"
+	"github.com/xmplusdev/xray-core/proxy/dokodemo"
+	"github.com/xmplusdev/xray-core/proxy/freedom"
+	"github.com/xmplusdev/xray-core/proxy/vless"
+	"github.com/xmplusdev/xray-core/proxy/vless/inbound"
+	"github.com/xmplusdev/xray-core/proxy/vless/outbound"
+	"github.com/xmplusdev/xray-core/testing/servers/tcp"
+	"github.com/xmplusdev/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/transport/internet/reality"
+	transtcp "github.com/xmplusdev/xray-core/transport/internet/tcp"
+	"github.com/xmplusdev/xray-core/transport/internet/tls"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -85,8 +85,8 @@ func TestVless(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -190,8 +190,8 @@ func TestVlessTls(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -215,7 +215,7 @@ func TestVlessTls(t *testing.T) {
 				}),
 				SenderSettings: serial.ToTypedMessage(&proxyman.SenderConfig{
 					StreamSettings: &internet.StreamConfig{
-						ProtocolName: "tcp",
+						ProtocolName:      "tcp",
 						TransportSettings: []*internet.TransportConfig{
 							{
 								ProtocolName: "tcp",
@@ -313,8 +313,8 @@ func TestVlessXtlsVision(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -339,7 +339,7 @@ func TestVlessXtlsVision(t *testing.T) {
 				}),
 				SenderSettings: serial.ToTypedMessage(&proxyman.SenderConfig{
 					StreamSettings: &internet.StreamConfig{
-						ProtocolName: "tcp",
+						ProtocolName:      "tcp",
 						TransportSettings: []*internet.TransportConfig{
 							{
 								ProtocolName: "tcp",
@@ -403,12 +403,12 @@ func TestVlessXtlsVisionReality(t *testing.T) {
 						SecurityType: serial.GetMessageType(&reality.Config{}),
 						SecuritySettings: []*serial.TypedMessage{
 							serial.ToTypedMessage(&reality.Config{
-								Show:        true,
-								Dest:        "www.google.com:443", // use google for now, may fail in some region
+								Show: true,
+								Dest: "www.google.com:443", // use google for now, may fail in some region
 								ServerNames: []string{"www.google.com"},
-								PrivateKey:  privateKey,
-								ShortIds:    shortIds,
-								Type:        "tcp",
+								PrivateKey: privateKey,
+								ShortIds: shortIds,
+								Type: "tcp",
 							}),
 						},
 					},
@@ -447,8 +447,8 @@ func TestVlessXtlsVisionReality(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -473,7 +473,7 @@ func TestVlessXtlsVisionReality(t *testing.T) {
 				}),
 				SenderSettings: serial.ToTypedMessage(&proxyman.SenderConfig{
 					StreamSettings: &internet.StreamConfig{
-						ProtocolName: "tcp",
+						ProtocolName:      "tcp",
 						TransportSettings: []*internet.TransportConfig{
 							{
 								ProtocolName: "tcp",
@@ -483,12 +483,12 @@ func TestVlessXtlsVisionReality(t *testing.T) {
 						SecurityType: serial.GetMessageType(&reality.Config{}),
 						SecuritySettings: []*serial.TypedMessage{
 							serial.ToTypedMessage(&reality.Config{
-								Show:        true,
+								Show: true,
 								Fingerprint: "chrome",
-								ServerName:  "www.google.com",
-								PublicKey:   publicKey,
-								ShortId:     shortIds[0],
-								SpiderX:     "/",
+								ServerName: "www.google.com",
+								PublicKey: publicKey,
+								ShortId: shortIds[0],
+								SpiderX: "/",
 							}),
 						},
 					},

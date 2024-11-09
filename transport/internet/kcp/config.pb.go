@@ -7,7 +7,7 @@
 package kcp
 
 import (
-	serial "github.com/xtls/xray-core/common/serial"
+	serial "github.com/xmplusdev/xray-core/common/serial"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -342,9 +342,7 @@ func (x *ConnectionReuse) GetEnable() bool {
 	return false
 }
 
-// Pre-shared secret between client and server. It is used for traffic obfuscation.
-// Note that if seed is absent in the config, the traffic will still be obfuscated,
-// but by a predefined algorithm.
+// Maximum Transmission Unit, in bytes.
 type EncryptionSeed struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache

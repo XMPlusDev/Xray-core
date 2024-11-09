@@ -10,10 +10,10 @@ import (
 	"net/http/httptrace"
 	"sync"
 
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/signal/done"
+	"github.com/xmplusdev/xray-core/common"
+	"github.com/xmplusdev/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/common/net"
+	"github.com/xmplusdev/xray-core/common/signal/done"
 )
 
 // interface to abstract between use of browser dialer, vs net/http
@@ -25,10 +25,6 @@ type DialerClient interface {
 	// (ctx, baseURL) -> (downloadReader, remoteAddr, localAddr)
 	// baseURL already contains sessionId
 	OpenDownload(context.Context, string) (io.ReadCloser, net.Addr, net.Addr, error)
-
-	// (ctx, baseURL) -> uploadWriter
-	// baseURL already contains sessionId
-	OpenUpload(context.Context, string) io.WriteCloser
 }
 
 // implements splithttp.DialerClient in terms of direct network connections
@@ -40,14 +36,6 @@ type DefaultDialerClient struct {
 	// pool of net.Conn, created using dialUploadConn
 	uploadRawPool  *sync.Pool
 	dialUploadConn func(ctxInner context.Context) (net.Conn, error)
-}
-
-func (c *DefaultDialerClient) OpenUpload(ctx context.Context, baseURL string) io.WriteCloser {
-	reader, writer := io.Pipe()
-	req, _ := http.NewRequestWithContext(ctx, "POST", baseURL, reader)
-	req.Header = c.transportConfig.GetRequestHeader()
-	go c.client.Do(req)
-	return writer
 }
 
 func (c *DefaultDialerClient) OpenDownload(ctx context.Context, baseURL string) (io.ReadCloser, gonet.Addr, gonet.Addr, error) {

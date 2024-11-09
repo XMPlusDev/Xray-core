@@ -7,8 +7,8 @@
 package internet
 
 import (
-	net "github.com/xtls/xray-core/common/net"
-	serial "github.com/xtls/xray-core/common/serial"
+	net "github.com/xmplusdev/xray-core/common/net"
+	serial "github.com/xmplusdev/xray-core/common/serial"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -152,9 +152,9 @@ type TransportConfig struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	// Transport protocol name.
+	// Type of network that this settings supports.
 	ProtocolName string `protobuf:"bytes,3,opt,name=protocol_name,json=protocolName,proto3" json:"protocol_name,omitempty"`
-	// Specific transport protocol settings.
+	// Specific settings. Must be of the transports.
 	Settings *serial.TypedMessage `protobuf:"bytes,2,opt,name=settings,proto3" json:"settings,omitempty"`
 }
 
@@ -214,7 +214,7 @@ type StreamConfig struct {
 	TransportSettings []*TransportConfig `protobuf:"bytes,2,rep,name=transport_settings,json=transportSettings,proto3" json:"transport_settings,omitempty"`
 	// Type of security. Must be a message name of the settings proto.
 	SecurityType string `protobuf:"bytes,3,opt,name=security_type,json=securityType,proto3" json:"security_type,omitempty"`
-	// Transport security settings. They can be either TLS or REALITY.
+	// Settings for transport security. For now the only choice is TLS.
 	SecuritySettings []*serial.TypedMessage `protobuf:"bytes,4,rep,name=security_settings,json=securitySettings,proto3" json:"security_settings,omitempty"`
 	SocketSettings   *SocketConfig          `protobuf:"bytes,6,opt,name=socket_settings,json=socketSettings,proto3" json:"socket_settings,omitempty"`
 }

@@ -1,8 +1,8 @@
 package api
 
 import (
-	handlerService "github.com/xtls/xray-core/app/proxyman/command"
-	"github.com/xtls/xray-core/main/commands/base"
+	handlerService "github.com/xmplusdev/xray-core/app/proxyman/command"
+	"github.com/xmplusdev/xray-core/main/commands/base"
 )
 
 var cmdInboundUser = &base.Command{
@@ -39,7 +39,7 @@ func executeInboundUser(cmd *base.Command, args []string) {
 
 	client := handlerService.NewHandlerServiceClient(conn)
 	r := &handlerService.GetInboundUserRequest{
-		Tag:   tag,
+		Tag: tag,
 		Email: email,
 	}
 	resp, err := client.GetInboundUsers(ctx, r)

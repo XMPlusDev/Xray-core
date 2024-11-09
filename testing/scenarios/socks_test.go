@@ -4,20 +4,20 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xtls/xray-core/app/proxyman"
-	"github.com/xtls/xray-core/app/router"
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/core"
-	"github.com/xtls/xray-core/proxy/blackhole"
-	"github.com/xtls/xray-core/proxy/dokodemo"
-	"github.com/xtls/xray-core/proxy/freedom"
-	"github.com/xtls/xray-core/proxy/http"
-	"github.com/xtls/xray-core/proxy/socks"
-	"github.com/xtls/xray-core/testing/servers/tcp"
-	"github.com/xtls/xray-core/testing/servers/udp"
+	"github.com/xmplusdev/xray-core/app/proxyman"
+	"github.com/xmplusdev/xray-core/app/router"
+	"github.com/xmplusdev/xray-core/common"
+	"github.com/xmplusdev/xray-core/common/net"
+	"github.com/xmplusdev/xray-core/common/protocol"
+	"github.com/xmplusdev/xray-core/common/serial"
+	"github.com/xmplusdev/xray-core/core"
+	"github.com/xmplusdev/xray-core/proxy/blackhole"
+	"github.com/xmplusdev/xray-core/proxy/dokodemo"
+	"github.com/xmplusdev/xray-core/proxy/freedom"
+	"github.com/xmplusdev/xray-core/proxy/http"
+	"github.com/xmplusdev/xray-core/proxy/socks"
+	"github.com/xmplusdev/xray-core/testing/servers/tcp"
+	"github.com/xmplusdev/xray-core/testing/servers/udp"
 	xproxy "golang.org/x/net/proxy"
 	socks4 "h12.io/socks"
 )
@@ -64,8 +64,8 @@ func TestSocksBridgeTCP(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -143,8 +143,8 @@ func TestSocksWithHttpRequest(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -213,8 +213,8 @@ func TestSocksBridageUDP(t *testing.T) {
 						Listen:   net.NewIPOrDomain(net.LocalHostIP),
 					}),
 					ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-						Address:  net.NewIPOrDomain(dest.Address),
-						Port:     uint32(dest.Port),
+						Address: net.NewIPOrDomain(dest.Address),
+						Port:    uint32(dest.Port),
 						Networks: []net.Network{net.Network_UDP},
 					}),
 				},
@@ -247,8 +247,8 @@ func TestSocksBridageUDP(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_UDP},
 				}),
 			},
@@ -328,8 +328,8 @@ func TestSocksBridageUDPWithRouting(t *testing.T) {
 						Listen:   net.NewIPOrDomain(net.LocalHostIP),
 					}),
 					ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-						Address:  net.NewIPOrDomain(dest.Address),
-						Port:     uint32(dest.Port),
+						Address: net.NewIPOrDomain(dest.Address),
+						Port:    uint32(dest.Port),
 						Networks: []net.Network{net.Network_UDP},
 					}),
 				},
@@ -366,8 +366,8 @@ func TestSocksBridageUDPWithRouting(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_UDP},
 				}),
 			},

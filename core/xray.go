@@ -5,19 +5,19 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/platform"
-	"github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/features"
-	"github.com/xtls/xray-core/features/dns"
-	"github.com/xtls/xray-core/features/dns/localdns"
-	"github.com/xtls/xray-core/features/inbound"
-	"github.com/xtls/xray-core/features/outbound"
-	"github.com/xtls/xray-core/features/policy"
-	"github.com/xtls/xray-core/features/routing"
-	"github.com/xtls/xray-core/features/stats"
-	"github.com/xtls/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/common"
+	"github.com/xmplusdev/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/common/platform"
+	"github.com/xmplusdev/xray-core/common/serial"
+	"github.com/xmplusdev/xray-core/features"
+	"github.com/xmplusdev/xray-core/features/dns"
+	"github.com/xmplusdev/xray-core/features/dns/localdns"
+	"github.com/xmplusdev/xray-core/features/inbound"
+	"github.com/xmplusdev/xray-core/features/outbound"
+	"github.com/xmplusdev/xray-core/features/policy"
+	"github.com/xmplusdev/xray-core/features/routing"
+	"github.com/xmplusdev/xray-core/features/stats"
+	"github.com/xmplusdev/xray-core/transport/internet"
 )
 
 // Server is an instance of Xray. At any time, there must be at most one Server instance running.
@@ -87,7 +87,7 @@ func (r *resolution) resolve(allFeatures []features.Feature) (bool, error) {
 	return true, err
 }
 
-// Instance combines all Xray features.
+// Instance combines all functionalities in Xray.
 type Instance struct {
 	access             sync.Mutex
 	features           []features.Feature
@@ -228,7 +228,7 @@ func initInstanceWithConfig(config *Config, server *Instance) (bool, error) {
 	)
 
 	if server.featureResolutions != nil {
-		return true, errors.New("not all dependencies are resolved.")
+		return true, errors.New("not all dependency are resolved.")
 	}
 
 	if err := addInboundHandlers(server, config.Inbound); err != nil {

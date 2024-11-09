@@ -11,20 +11,20 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/platform/filesystem"
-	"github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/transport/internet"
-	httpheader "github.com/xtls/xray-core/transport/internet/headers/http"
-	"github.com/xtls/xray-core/transport/internet/http"
-	"github.com/xtls/xray-core/transport/internet/httpupgrade"
-	"github.com/xtls/xray-core/transport/internet/kcp"
-	"github.com/xtls/xray-core/transport/internet/reality"
-	"github.com/xtls/xray-core/transport/internet/splithttp"
-	"github.com/xtls/xray-core/transport/internet/tcp"
-	"github.com/xtls/xray-core/transport/internet/tls"
-	"github.com/xtls/xray-core/transport/internet/websocket"
+	"github.com/xmplusdev/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/common/net"
+	"github.com/xmplusdev/xray-core/common/platform/filesystem"
+	"github.com/xmplusdev/xray-core/common/serial"
+	"github.com/xmplusdev/xray-core/transport/internet"
+	httpheader "github.com/xmplusdev/xray-core/transport/internet/headers/http"
+	"github.com/xmplusdev/xray-core/transport/internet/http"
+	"github.com/xmplusdev/xray-core/transport/internet/httpupgrade"
+	"github.com/xmplusdev/xray-core/transport/internet/kcp"
+	"github.com/xmplusdev/xray-core/transport/internet/reality"
+	"github.com/xmplusdev/xray-core/transport/internet/splithttp"
+	"github.com/xmplusdev/xray-core/transport/internet/tcp"
+	"github.com/xmplusdev/xray-core/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/transport/internet/websocket"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -233,7 +233,6 @@ type SplitHTTPConfig struct {
 	XPaddingBytes        *Int32Range       `json:"xPaddingBytes"`
 	Xmux                 Xmux              `json:"xmux"`
 	DownloadSettings     *StreamConfig     `json:"downloadSettings"`
-	Mode                 string            `json:"mode"`
 }
 
 type Xmux struct {
@@ -290,14 +289,6 @@ func (c *SplitHTTPConfig) Build() (proto.Message, error) {
 		muxProtobuf.CMaxReuseTimes.To = 128
 	}
 
-	switch c.Mode {
-	case "":
-		c.Mode = "auto"
-	case "auto", "packet-up", "stream-up":
-	default:
-		return nil, errors.New("unsupported mode: " + c.Mode)
-	}
-
 	config := &splithttp.Config{
 		Path:                 c.Path,
 		Host:                 c.Host,
@@ -308,7 +299,6 @@ func (c *SplitHTTPConfig) Build() (proto.Message, error) {
 		NoSSEHeader:          c.NoSSEHeader,
 		XPaddingBytes:        splithttpNewRandRangeConfig(c.XPaddingBytes),
 		Xmux:                 &muxProtobuf,
-		Mode:                 c.Mode,
 	}
 	var err error
 	if c.DownloadSettings != nil {
@@ -578,7 +568,7 @@ func (c *REALITYConfig) Build() (proto.Message, error) {
 					return nil, errors.New(`invalid "minClientVer": `, c.MinClientVer)
 				}
 				if u, err = strconv.ParseUint(s, 10, 8); err != nil {
-					return nil, errors.New(`"minClientVer[`, i, `]" should be less than 256`)
+					return nil, errors.New(`"minClientVer[`, i, `]" should be lesser than 256`)
 				} else {
 					config.MinClientVer[i] = byte(u)
 				}
@@ -592,7 +582,7 @@ func (c *REALITYConfig) Build() (proto.Message, error) {
 					return nil, errors.New(`invalid "maxClientVer": `, c.MaxClientVer)
 				}
 				if u, err = strconv.ParseUint(s, 10, 8); err != nil {
-					return nil, errors.New(`"maxClientVer[`, i, `]" should be less than 256`)
+					return nil, errors.New(`"maxClientVer[`, i, `]" should be lesser than 256`)
 				} else {
 					config.MaxClientVer[i] = byte(u)
 				}

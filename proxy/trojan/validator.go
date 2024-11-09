@@ -4,8 +4,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/protocol"
+	"github.com/xmplusdev/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/common/protocol"
 )
 
 // Validator stores valid trojan users.
@@ -50,6 +50,7 @@ func (v *Validator) Get(hash string) *protocol.MemoryUser {
 	}
 	return nil
 }
+
 
 // Get a trojan user with hashed key, nil if user doesn't exist.
 func (v *Validator) GetByEmail(email string) *protocol.MemoryUser {

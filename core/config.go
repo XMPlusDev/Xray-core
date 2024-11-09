@@ -4,11 +4,11 @@ import (
 	"io"
 	"strings"
 
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/buf"
-	"github.com/xtls/xray-core/common/cmdarg"
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/main/confloader"
+	"github.com/xmplusdev/xray-core/common"
+	"github.com/xmplusdev/xray-core/common/buf"
+	"github.com/xmplusdev/xray-core/common/cmdarg"
+	"github.com/xmplusdev/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/main/confloader"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -30,7 +30,7 @@ type ConfigLoader func(input interface{}) (*Config, error)
 // ConfigBuilder is a builder to build core.Config from filenames and formats
 type ConfigBuilder func(files []*ConfigSource) (*Config, error)
 
-// ConfigsMerger merges multiple json configs into a single one
+// ConfigsMerger merge multiple json configs into on config
 type ConfigsMerger func(files []*ConfigSource) (string, error)
 
 var (

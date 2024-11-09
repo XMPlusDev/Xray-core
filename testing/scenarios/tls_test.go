@@ -6,26 +6,26 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xtls/xray-core/app/proxyman"
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/common/protocol/tls/cert"
-	"github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/common/uuid"
-	core "github.com/xtls/xray-core/core"
-	"github.com/xtls/xray-core/proxy/dokodemo"
-	"github.com/xtls/xray-core/proxy/freedom"
-	"github.com/xtls/xray-core/proxy/vmess"
-	"github.com/xtls/xray-core/proxy/vmess/inbound"
-	"github.com/xtls/xray-core/proxy/vmess/outbound"
-	"github.com/xtls/xray-core/testing/servers/tcp"
-	"github.com/xtls/xray-core/testing/servers/udp"
-	"github.com/xtls/xray-core/transport/internet"
-	"github.com/xtls/xray-core/transport/internet/grpc"
-	"github.com/xtls/xray-core/transport/internet/http"
-	"github.com/xtls/xray-core/transport/internet/tls"
-	"github.com/xtls/xray-core/transport/internet/websocket"
+	"github.com/xmplusdev/xray-core/app/proxyman"
+	"github.com/xmplusdev/xray-core/common"
+	"github.com/xmplusdev/xray-core/common/net"
+	"github.com/xmplusdev/xray-core/common/protocol"
+	"github.com/xmplusdev/xray-core/common/protocol/tls/cert"
+	"github.com/xmplusdev/xray-core/common/serial"
+	"github.com/xmplusdev/xray-core/common/uuid"
+	core "github.com/xmplusdev/xray-core/core"
+	"github.com/xmplusdev/xray-core/proxy/dokodemo"
+	"github.com/xmplusdev/xray-core/proxy/freedom"
+	"github.com/xmplusdev/xray-core/proxy/vmess"
+	"github.com/xmplusdev/xray-core/proxy/vmess/inbound"
+	"github.com/xmplusdev/xray-core/proxy/vmess/outbound"
+	"github.com/xmplusdev/xray-core/testing/servers/tcp"
+	"github.com/xmplusdev/xray-core/testing/servers/udp"
+	"github.com/xmplusdev/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/transport/internet/grpc"
+	"github.com/xmplusdev/xray-core/transport/internet/http"
+	"github.com/xmplusdev/xray-core/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/transport/internet/websocket"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -81,8 +81,8 @@ func TestSimpleTLSConnection(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -196,8 +196,8 @@ func TestAutoIssuingCertificate(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -301,8 +301,8 @@ func TestTLSOverKCP(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -401,8 +401,8 @@ func TestTLSOverWebSocket(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -426,7 +426,7 @@ func TestTLSOverWebSocket(t *testing.T) {
 				}),
 				SenderSettings: serial.ToTypedMessage(&proxyman.SenderConfig{
 					StreamSettings: &internet.StreamConfig{
-						ProtocolName: "websocket",
+						ProtocolName:      "websocket",
 						TransportSettings: []*internet.TransportConfig{
 							{
 								ProtocolName: "websocket",
@@ -475,11 +475,11 @@ func TestHTTP2(t *testing.T) {
 					PortList: &net.PortList{Range: []*net.PortRange{net.SinglePortRange(serverPort)}},
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 					StreamSettings: &internet.StreamConfig{
-						ProtocolName: "http",
+						ProtocolName:      "http",
 						TransportSettings: []*internet.TransportConfig{
 							{
 								ProtocolName: "http",
-								Settings: serial.ToTypedMessage(&http.Config{
+								Settings:     serial.ToTypedMessage(&http.Config{
 									Host: []string{"example.com"},
 									Path: "/testpath",
 								}),
@@ -520,8 +520,8 @@ func TestHTTP2(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -545,11 +545,11 @@ func TestHTTP2(t *testing.T) {
 				}),
 				SenderSettings: serial.ToTypedMessage(&proxyman.SenderConfig{
 					StreamSettings: &internet.StreamConfig{
-						ProtocolName: "http",
+						ProtocolName:      "http",
 						TransportSettings: []*internet.TransportConfig{
 							{
 								ProtocolName: "http",
-								Settings: serial.ToTypedMessage(&http.Config{
+								Settings:     serial.ToTypedMessage(&http.Config{
 									Host: []string{"example.com"},
 									Path: "/testpath",
 								}),
@@ -639,8 +639,8 @@ func TestGRPC(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -755,8 +755,8 @@ func TestGRPCMultiMode(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -866,8 +866,8 @@ func TestSimpleTLSConnectionPinned(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -968,8 +968,8 @@ func TestSimpleTLSConnectionPinnedWrongCert(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -1069,8 +1069,8 @@ func TestUTLSConnectionPinned(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},
@@ -1172,8 +1172,8 @@ func TestUTLSConnectionPinnedWrongCert(t *testing.T) {
 					Listen:   net.NewIPOrDomain(net.LocalHostIP),
 				}),
 				ProxySettings: serial.ToTypedMessage(&dokodemo.Config{
-					Address:  net.NewIPOrDomain(dest.Address),
-					Port:     uint32(dest.Port),
+					Address: net.NewIPOrDomain(dest.Address),
+					Port:    uint32(dest.Port),
 					Networks: []net.Network{net.Network_TCP},
 				}),
 			},

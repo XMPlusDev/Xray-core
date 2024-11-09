@@ -6,17 +6,13 @@ import (
 	"io/ioutil"
 	gonet "net"
 
-	"github.com/xtls/xray-core/transport/internet/browser_dialer"
-	"github.com/xtls/xray-core/transport/internet/websocket"
+	"github.com/xmplusdev/xray-core/transport/internet/browser_dialer"
+	"github.com/xmplusdev/xray-core/transport/internet/websocket"
 )
 
 // implements splithttp.DialerClient in terms of browser dialer
 // has no fields because everything is global state :O)
 type BrowserDialerClient struct{}
-
-func (c *BrowserDialerClient) OpenUpload(ctx context.Context, baseURL string) io.WriteCloser {
-	panic("not implemented yet")
-}
 
 func (c *BrowserDialerClient) OpenDownload(ctx context.Context, baseURL string) (io.ReadCloser, gonet.Addr, gonet.Addr, error) {
 	conn, err := browser_dialer.DialGet(baseURL)
