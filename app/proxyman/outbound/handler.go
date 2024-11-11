@@ -11,8 +11,8 @@ import (
 
 	"github.com/xmplusdev/xray-core/v24/app/proxyman"
 	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
 	"github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
 	"github.com/xmplusdev/xray-core/v24/common/mux"
 	"github.com/xmplusdev/xray-core/v24/common/net"
 	"github.com/xmplusdev/xray-core/v24/common/net/cnc"
@@ -54,7 +54,7 @@ func getStatCounter(v *core.Instance, tag string) (stats.Counter, stats.Counter)
 	return uplinkCounter, downlinkCounter
 }
 
-// Handler is an implements of outbound.Handler.
+// Handler implements outbound.Handler.
 type Handler struct {
 	tag             string
 	senderSettings  *proxyman.SenderConfig

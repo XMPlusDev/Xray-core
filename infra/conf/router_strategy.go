@@ -2,9 +2,9 @@ package conf
 
 import (
 	"google.golang.org/protobuf/proto"
-	
-	"github.com/xmplusdev/xray-core/v24/app/router"
+
 	"github.com/xmplusdev/xray-core/v24/app/observatory/burst"
+	"github.com/xmplusdev/xray-core/v24/app/router"
 	"github.com/xmplusdev/xray-core/v24/infra/conf/cfgcommon/duration"
 )
 
@@ -46,10 +46,10 @@ type strategyLeastLoadConfig struct {
 
 // healthCheckSettings holds settings for health Checker
 type healthCheckSettings struct {
-	Destination   string   `json:"destination"`
-	Connectivity  string   `json:"connectivity"`
+	Destination   string            `json:"destination"`
+	Connectivity  string            `json:"connectivity"`
 	Interval      duration.Duration `json:"interval"`
-	SamplingCount int      `json:"sampling"`
+	SamplingCount int               `json:"sampling"`
 	Timeout       duration.Duration `json:"timeout"`
 }
 

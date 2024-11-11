@@ -13,7 +13,7 @@ import (
 	"github.com/xmplusdev/xray-core/v24/features/inbound"
 )
 
-// Manager is to manage all inbound handlers.
+// Manager manages all inbound handlers.
 type Manager struct {
 	access          sync.RWMutex
 	untaggedHandler []inbound.Handler

@@ -15,7 +15,7 @@ type Router interface {
 	// PickRoute returns a route decision based on the given routing context.
 	PickRoute(ctx Context) (Route, error)
 	AddRule(config *serial.TypedMessage, shouldAppend bool) error
-	RemoveRule(tag string) error
+	RemoveRule(tag string) error	
 	// Add user routing rule
 	AddUserRule(tag string, email []string)
 	// Remove user routing rule

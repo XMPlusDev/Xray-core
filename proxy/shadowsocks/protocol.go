@@ -10,9 +10,9 @@ import (
 
 	"github.com/xmplusdev/xray-core/v24/common"
 	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
 	"github.com/xmplusdev/xray-core/v24/common/crypto"
 	"github.com/xmplusdev/xray-core/v24/common/drain"
+	"github.com/xmplusdev/xray-core/v24/common/errors"
 	"github.com/xmplusdev/xray-core/v24/common/net"
 	"github.com/xmplusdev/xray-core/v24/common/protocol"
 )
