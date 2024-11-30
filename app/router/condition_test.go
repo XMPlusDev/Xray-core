@@ -1,8 +1,6 @@
 package router_test
 
 import (
-	"os"
-	"path/filepath"
 	"strconv"
 	"testing"
 
@@ -10,7 +8,6 @@ import (
 	"github.com/xmplusdev/xray-core/v24/common"
 	"github.com/xmplusdev/xray-core/v24/common/errors"
 	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/platform"
 	"github.com/xmplusdev/xray-core/v24/common/platform/filesystem"
 	"github.com/xmplusdev/xray-core/v24/common/protocol"
 	"github.com/xmplusdev/xray-core/v24/common/protocol/http"
@@ -19,18 +16,6 @@ import (
 	routing_session "github.com/xmplusdev/xray-core/v24/features/routing/session"
 	"google.golang.org/protobuf/proto"
 )
-
-func init() {
-	wd, err := os.Getwd()
-	common.Must(err)
-
-	if _, err := os.Stat(platform.GetAssetLocation("geoip.dat")); err != nil && os.IsNotExist(err) {
-		common.Must(filesystem.CopyFile(platform.GetAssetLocation("geoip.dat"), filepath.Join(wd, "..", "..", "release", "config", "geoip.dat")))
-	}
-	if _, err := os.Stat(platform.GetAssetLocation("geosite.dat")); err != nil && os.IsNotExist(err) {
-		common.Must(filesystem.CopyFile(platform.GetAssetLocation("geosite.dat"), filepath.Join(wd, "..", "..", "release", "config", "geosite.dat")))
-	}
-}
 
 func withBackground() routing.Context {
 	return &routing_session.Context{}
@@ -316,10 +301,15 @@ func TestRoutingRule(t *testing.T) {
 }
 
 func loadGeoSite(country string) ([]*Domain, error) {
-	geositeBytes, err := filesystem.ReadAsset("geosite.dat")
+	path, err := getAssetPath("geosite.dat")
 	if err != nil {
 		return nil, err
 	}
+	geositeBytes, err := filesystem.ReadFile(path)
+	if err != nil {
+		return nil, err
+	}
+
 	var geositeList GeoSiteList
 	if err := proto.Unmarshal(geositeBytes, &geositeList); err != nil {
 		return nil, err
