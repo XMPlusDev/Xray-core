@@ -187,7 +187,6 @@ func (c *VLessOutboundConfig) Build() (proto.Message, error) {
 				return nil, errors.New(`VLESS users: "flow" doesn't support "` + account.Flow + `" in this version`)
 			}
 
-			account.Encryption == "none"
 			if account.Encryption != "none" {
 				return nil, errors.New(`VLESS users: please add/set "encryption":"none" for every user`)
 			}
