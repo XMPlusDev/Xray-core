@@ -7,6 +7,7 @@ import (
 	"github.com/xmplusdev/xray-core/v24/app/proxyman"
 	"github.com/xmplusdev/xray-core/v24/common"
 	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v24/common/net"
 	"github.com/xmplusdev/xray-core/v24/common/serial"
 	"github.com/xmplusdev/xray-core/v24/common/session"
 	"github.com/xmplusdev/xray-core/v24/core"
@@ -157,6 +158,9 @@ func NewHandler(ctx context.Context, config *core.InboundHandlerConfig) (inbound
 		ctx = session.ContextWithSockopt(ctx, &session.Sockopt{
 			Mark: streamSettings.SocketSettings.Mark,
 		})
+	}
+	if streamSettings != nil && streamSettings.ProtocolName == "splithttp" {
+		ctx = session.ContextWithAllowedNetwork(ctx, net.Network_UDP)
 	}
 
 	allocStrategy := receiverSettings.AllocationStrategy

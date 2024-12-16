@@ -4,7 +4,6 @@ import (
 	"context"
 
 	"github.com/xmplusdev/xray-core/v24/app/observatory"
-	"github.com/xmplusdev/xray-core/v24/common"
 	"github.com/xmplusdev/xray-core/v24/common/dice"
 	"github.com/xmplusdev/xray-core/v24/core"
 	"github.com/xmplusdev/xray-core/v24/features/extension"
@@ -20,6 +19,11 @@ type RandomStrategy struct {
 
 func (s *RandomStrategy) InjectContext(ctx context.Context) {
 	s.ctx = ctx
+	if len(s.FallbackTag) > 0 {
+		core.RequireFeaturesAsync(s.ctx, func(observatory extension.Observatory) {
+			s.observatory = observatory
+		})
+	}
 }
 
 func (s *RandomStrategy) GetPrincipleTarget(strings []string) []string {
@@ -27,12 +31,6 @@ func (s *RandomStrategy) GetPrincipleTarget(strings []string) []string {
 }
 
 func (s *RandomStrategy) PickOutbound(candidates []string) string {
-	if len(s.FallbackTag) > 0 && s.observatory == nil {
-		common.Must(core.RequireFeatures(s.ctx, func(observatory extension.Observatory) error {
-			s.observatory = observatory
-			return nil
-		}))
-	}
 	if s.observatory != nil {
 		observeReport, err := s.observatory.GetObservation(s.ctx)
 		if err == nil {

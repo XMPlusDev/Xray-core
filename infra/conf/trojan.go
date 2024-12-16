@@ -55,7 +55,8 @@ func (c *TrojanClientConfig) Build() (proto.Message, error) {
 		if rec.Flow != "" {
 			return nil, errors.PrintRemovedFeatureError(`Flow for Trojan`, ``)
 		}
-        */
+		*/
+
 		config.Server[idx] = &protocol.ServerEndpoint{
 			Address: rec.Address.Build(),
 			Port:    uint32(rec.Port),

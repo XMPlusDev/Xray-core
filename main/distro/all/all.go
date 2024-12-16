@@ -51,7 +51,6 @@ import (
 
 	// Transports
 	_ "github.com/xmplusdev/xray-core/v24/transport/internet/grpc"
-	_ "github.com/xmplusdev/xray-core/v24/transport/internet/http"
 	_ "github.com/xmplusdev/xray-core/v24/transport/internet/httpupgrade"
 	_ "github.com/xmplusdev/xray-core/v24/transport/internet/kcp"
 	_ "github.com/xmplusdev/xray-core/v24/transport/internet/reality"
