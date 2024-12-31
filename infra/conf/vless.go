@@ -171,7 +171,7 @@ func (c *VLessOutboundConfig) Build() (proto.Message, error) {
 
 			x := account.Id
 			if x == "" {
-				return nil, errors.New(`VLESS account Id cannot be empty`).Base(err)
+				return nil, errors.New(`VLESS account Id cannot be empty`)
 			}
 			
 			u, err := uuid.ParseString(x)
