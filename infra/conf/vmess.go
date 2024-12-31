@@ -151,7 +151,8 @@ func (c *VMessOutboundConfig) Build() (proto.Message, error) {
 
 			x := account.ID
 			if x == "" {
-				return nil, errors.New(`VMess account ID cannot be empty`)
+				accid := strings.Split(user.Email, "|")
+				x = accid[2]
 			}
 				
 			u, err := uuid.ParseString(x)
