@@ -5,6 +5,7 @@ import (
 	sync "sync"
 
 	"github.com/xmplusdev/xray-core/v24/app/observatory"
+	"github.com/xmplusdev/xray-core/v24/common"
 	"github.com/xmplusdev/xray-core/v24/common/errors"
 	"github.com/xmplusdev/xray-core/v24/core"
 	"github.com/xmplusdev/xray-core/v24/features/extension"
@@ -31,9 +32,10 @@ type RoundRobinStrategy struct {
 func (s *RoundRobinStrategy) InjectContext(ctx context.Context) {
 	s.ctx = ctx
 	if len(s.FallbackTag) > 0 {
-		core.RequireFeaturesAsync(s.ctx, func(observatory extension.Observatory) {
+		common.Must(core.RequireFeatures(s.ctx, func(observatory extension.Observatory) error {
 			s.observatory = observatory
-		})
+			return nil
+		}))
 	}
 }
 

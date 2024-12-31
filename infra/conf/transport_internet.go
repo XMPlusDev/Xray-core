@@ -165,11 +165,13 @@ func (c *WebSocketConfig) Build() (proto.Message, error) {
 	}
 	// Priority (client): host > serverName > address
 	for k, v := range c.Headers {
-		errors.PrintDeprecatedFeatureWarning(`"host" in "headers"`, `independent "host"`)
-		if c.Host == "" {
-			c.Host = v
+		if strings.ToLower(k) == "host" {
+			errors.PrintDeprecatedFeatureWarning(`"host" in "headers"`, `independent "host"`)
+			if c.Host == "" {
+				c.Host = v
+			}
+			delete(c.Headers, k)
 		}
-		delete(c.Headers, k)
 	}
 	config := &websocket.Config{
 		Path:                path,
@@ -285,8 +287,8 @@ func (c *SplitHTTPConfig) Build() (proto.Message, error) {
 	if c.Xmux == (XmuxConfig{}) {
 		c.Xmux.MaxConcurrency.From = 16
 		c.Xmux.MaxConcurrency.To = 32
-		c.Xmux.CMaxReuseTimes.From = 64
-		c.Xmux.CMaxReuseTimes.To = 128
+		c.Xmux.CMaxReuseTimes.From = 256
+		c.Xmux.CMaxReuseTimes.To = 512
 		c.Xmux.HMaxRequestTimes.From = 800
 		c.Xmux.HMaxRequestTimes.To = 900
 	}
@@ -436,7 +438,7 @@ func (c *TLSConfig) Build() (proto.Message, error) {
 	config.MaxVersion = c.MaxVersion
 	config.CipherSuites = c.CipherSuites
 	config.Fingerprint = strings.ToLower(c.Fingerprint)
-	if config.Fingerprint != "" && tls.GetFingerprint(config.Fingerprint) == nil {
+	if config.Fingerprint != "unsafe" && tls.GetFingerprint(config.Fingerprint) == nil {
 		return nil, errors.New(`unknown fingerprint: `, config.Fingerprint)
 	}
 	config.RejectUnknownSni = c.RejectUnknownSNI
@@ -582,14 +584,12 @@ func (c *REALITYConfig) Build() (proto.Message, error) {
 		config.ServerNames = c.ServerNames
 		config.MaxTimeDiff = c.MaxTimeDiff
 	} else {
-		if c.Fingerprint == "" {
-			return nil, errors.New(`empty "fingerprint"`)
-		}
-		if config.Fingerprint = strings.ToLower(c.Fingerprint); tls.GetFingerprint(config.Fingerprint) == nil {
-			return nil, errors.New(`unknown "fingerprint": `, config.Fingerprint)
-		}
-		if config.Fingerprint == "hellogolang" {
+		config.Fingerprint = strings.ToLower(c.Fingerprint)
+		if config.Fingerprint == "unsafe" || config.Fingerprint == "hellogolang" {
 			return nil, errors.New(`invalid "fingerprint": `, config.Fingerprint)
+		}
+		if tls.GetFingerprint(config.Fingerprint) == nil {
+			return nil, errors.New(`unknown "fingerprint": `, config.Fingerprint)
 		}
 		if len(c.ServerNames) != 0 {
 			return nil, errors.New(`non-empty "serverNames", please use "serverName" instead`)
