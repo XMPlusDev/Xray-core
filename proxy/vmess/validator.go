@@ -7,10 +7,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/v24/common/dice"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/protocol"
-	"github.com/xmplusdev/xray-core/v24/proxy/vmess/aead"
+	"github.com/xmplusdev/xray-core/v25/common/dice"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/protocol"
+	"github.com/xmplusdev/xray-core/v25/proxy/vmess/aead"
 )
 
 // TimedUserValidator is a user Validator based on time.

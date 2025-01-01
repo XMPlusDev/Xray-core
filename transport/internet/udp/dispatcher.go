@@ -7,15 +7,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/protocol/udp"
-	"github.com/xmplusdev/xray-core/v24/common/signal"
-	"github.com/xmplusdev/xray-core/v24/common/signal/done"
-	"github.com/xmplusdev/xray-core/v24/features/routing"
-	"github.com/xmplusdev/xray-core/v24/transport"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/protocol/udp"
+	"github.com/xmplusdev/xray-core/v25/common/signal"
+	"github.com/xmplusdev/xray-core/v25/common/signal/done"
+	"github.com/xmplusdev/xray-core/v25/features/routing"
+	"github.com/xmplusdev/xray-core/v25/transport"
 )
 
 type ResponseCallback func(ctx context.Context, packet *udp.Packet)

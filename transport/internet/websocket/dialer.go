@@ -9,13 +9,13 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/transport/internet"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/browser_dialer"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/transport/internet"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/browser_dialer"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/tls"
 )
 
 // Dial dials a WebSocket connection to the given destination.

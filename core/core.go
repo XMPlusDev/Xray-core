@@ -13,13 +13,13 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/xmplusdev/xray-core/v24/common/serial"
+	"github.com/xmplusdev/xray-core/v25/common/serial"
 )
 
 var (
-	Version_x byte = 24
-	Version_y byte = 12
-	Version_z byte = 28
+	Version_x byte = 25
+	Version_y byte = 1
+	Version_z byte = 1
 )
 
 var (

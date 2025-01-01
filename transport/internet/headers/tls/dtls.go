@@ -3,8 +3,8 @@ package tls
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/dice"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/dice"
 )
 
 // DTLS writes header as DTLS. See https://tools.ietf.org/html/rfc6347

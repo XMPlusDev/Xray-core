@@ -5,9 +5,9 @@ import (
 	"io"
 	"testing"
 
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	. "github.com/xmplusdev/xray-core/v24/common/crypto"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	. "github.com/xmplusdev/xray-core/v25/common/crypto"
 )
 
 func TestChunkStreamIO(t *testing.T) {

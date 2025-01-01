@@ -3,10 +3,10 @@ package dns
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/features/dns"
-	"github.com/xmplusdev/xray-core/v24/features/routing"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/features/dns"
+	"github.com/xmplusdev/xray-core/v25/features/routing"
 )
 
 // ResolvableContext is an implementation of routing.Context, with domain resolving capability.

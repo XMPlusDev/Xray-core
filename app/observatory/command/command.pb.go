@@ -7,7 +7,7 @@
 package command
 
 import (
-	observatory "github.com/xmplusdev/xray-core/v24/app/observatory"
+	observatory "github.com/xmplusdev/xray-core/v25/app/observatory"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

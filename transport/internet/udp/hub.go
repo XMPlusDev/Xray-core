@@ -3,11 +3,11 @@ package udp
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/protocol/udp"
-	"github.com/xmplusdev/xray-core/v24/transport/internet"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/protocol/udp"
+	"github.com/xmplusdev/xray-core/v25/transport/internet"
 )
 
 type HubOption func(h *Hub)

@@ -15,18 +15,18 @@ import (
 
 	"github.com/xtls/quic-go"
 	"github.com/xtls/quic-go/http3"
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/signal/done"
-	"github.com/xmplusdev/xray-core/v24/common/uuid"
-	"github.com/xmplusdev/xray-core/v24/transport/internet"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/browser_dialer"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/reality"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/tls"
-	"github.com/xmplusdev/xray-core/v24/transport/pipe"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/signal/done"
+	"github.com/xmplusdev/xray-core/v25/common/uuid"
+	"github.com/xmplusdev/xray-core/v25/transport/internet"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/browser_dialer"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/reality"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v25/transport/pipe"
 	"golang.org/x/net/http2"
 )
 
@@ -308,7 +308,7 @@ func Dial(ctx context.Context, dest net.Destination, streamSettings *internet.Me
 		globalDialerAccess.Lock()
 		if streamSettings.DownloadSettings == nil {
 			streamSettings.DownloadSettings = common.Must2(internet.ToMemoryStreamConfig(transportConfiguration.DownloadSettings)).(*internet.MemoryStreamConfig)
-			if streamSettings.DownloadSettings.SocketSettings == nil {
+			if streamSettings.SocketSettings != nil && streamSettings.SocketSettings.Penetrate {
 				streamSettings.DownloadSettings.SocketSettings = streamSettings.SocketSettings
 			}
 		}
@@ -447,7 +447,8 @@ func Dial(ctx context.Context, dest net.Destination, streamSettings *internet.Me
 
 			lastWrite = time.Now()
 
-			if xmuxClient != nil && xmuxClient.LeftRequests.Add(-1) <= 0 {
+			if xmuxClient != nil && (xmuxClient.LeftRequests.Add(-1) <= 0 ||
+				(xmuxClient.UnreusableAt != time.Time{} && lastWrite.After(xmuxClient.UnreusableAt))) {
 				httpClient, xmuxClient = getHTTPClient(ctx, dest, streamSettings)
 			}
 

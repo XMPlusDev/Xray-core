@@ -3,8 +3,8 @@ package buf
 import (
 	"io"
 
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
 )
 
 func readOneUDP(r io.Reader) (*Buffer, error) {

@@ -3,8 +3,8 @@ package policy
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/features/policy"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/features/policy"
 )
 
 // Instance is an instance of Policy manager.

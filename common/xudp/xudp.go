@@ -10,12 +10,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/platform"
-	"github.com/xmplusdev/xray-core/v24/common/protocol"
-	"github.com/xmplusdev/xray-core/v24/common/session"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/platform"
+	"github.com/xmplusdev/xray-core/v25/common/protocol"
+	"github.com/xmplusdev/xray-core/v25/common/session"
 	"lukechampine.com/blake3"
 )
 

@@ -5,14 +5,14 @@ import (
 	"io"
 	"sync/atomic"
 
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/dice"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/transport/internet"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/dice"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/transport/internet"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/tls"
 )
 
 var globalConv = uint32(dice.RollUint16())

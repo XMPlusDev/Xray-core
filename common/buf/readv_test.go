@@ -9,9 +9,9 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xmplusdev/xray-core/v24/common"
-	. "github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/testing/servers/tcp"
+	"github.com/xmplusdev/xray-core/v25/common"
+	. "github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/testing/servers/tcp"
 	"golang.org/x/sync/errgroup"
 )
 

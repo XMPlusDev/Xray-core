@@ -7,8 +7,8 @@
 package dns
 
 import (
-	router "github.com/xmplusdev/xray-core/v24/app/router"
-	net "github.com/xmplusdev/xray-core/v24/common/net"
+	router "github.com/xmplusdev/xray-core/v25/app/router"
+	net "github.com/xmplusdev/xray-core/v25/common/net"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

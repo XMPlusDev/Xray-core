@@ -9,14 +9,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/v24/app/dispatcher"
-	"github.com/xmplusdev/xray-core/v24/app/proxyman"
-	"github.com/xmplusdev/xray-core/v24/app/stats"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/serial"
-	core "github.com/xmplusdev/xray-core/v24/core"
-	"github.com/xmplusdev/xray-core/v24/transport/internet"
+	"github.com/xmplusdev/xray-core/v25/app/dispatcher"
+	"github.com/xmplusdev/xray-core/v25/app/proxyman"
+	"github.com/xmplusdev/xray-core/v25/app/stats"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/serial"
+	core "github.com/xmplusdev/xray-core/v25/core"
+	"github.com/xmplusdev/xray-core/v25/transport/internet"
 )
 
 var (
@@ -24,6 +24,7 @@ var (
 		"dokodemo-door": func() interface{} { return new(DokodemoConfig) },
 		"http":          func() interface{} { return new(HTTPServerConfig) },
 		"shadowsocks":   func() interface{} { return new(ShadowsocksServerConfig) },
+		"mixed":         func() interface{} { return new(SocksServerConfig) },
 		"socks":         func() interface{} { return new(SocksServerConfig) },
 		"vless":         func() interface{} { return new(VLessInboundConfig) },
 		"vmess":         func() interface{} { return new(VMessInboundConfig) },

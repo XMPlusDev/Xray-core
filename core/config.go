@@ -2,13 +2,14 @@ package core
 
 import (
 	"io"
+	"slices"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/cmdarg"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/main/confloader"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/cmdarg"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/main/confloader"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -64,14 +65,11 @@ func GetMergedConfig(args cmdarg.Arg) (string, error) {
 	supported := []string{"json", "yaml", "toml"}
 	for _, file := range args {
 		format := getFormat(file)
-		for _, s := range supported {
-			if s == format {
-				files = append(files, &ConfigSource{
-					Name:   file,
-					Format: format,
-				})
-				break
-			}
+		if slices.Contains(supported, format) {
+			files = append(files, &ConfigSource{
+				Name:   file,
+				Format: format,
+			})
 		}
 	}
 	return ConfigMergedFormFiles(files)

@@ -4,8 +4,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/platform"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/platform"
 )
 
 type FileReaderFunc func(path string) (io.ReadCloser, error)

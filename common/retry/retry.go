@@ -1,9 +1,9 @@
-package retry // import "github.com/xmplusdev/xray-core/v24/common/retry"
+package retry // import "github.com/xmplusdev/xray-core/v25/common/retry"
 
 import (
 	"time"
 
-	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
 )
 
 var ErrRetryFailed = errors.New("all retry attempts failed")

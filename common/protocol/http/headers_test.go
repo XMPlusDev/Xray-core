@@ -7,9 +7,9 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	. "github.com/xmplusdev/xray-core/v24/common/protocol/http"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	. "github.com/xmplusdev/xray-core/v25/common/protocol/http"
 )
 
 func TestParseXForwardedFor(t *testing.T) {

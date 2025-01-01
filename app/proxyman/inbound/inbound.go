@@ -4,14 +4,14 @@ import (
 	"context"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/v24/app/proxyman"
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/serial"
-	"github.com/xmplusdev/xray-core/v24/common/session"
-	"github.com/xmplusdev/xray-core/v24/core"
-	"github.com/xmplusdev/xray-core/v24/features/inbound"
+	"github.com/xmplusdev/xray-core/v25/app/proxyman"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/serial"
+	"github.com/xmplusdev/xray-core/v25/common/session"
+	"github.com/xmplusdev/xray-core/v25/core"
+	"github.com/xmplusdev/xray-core/v25/features/inbound"
 )
 
 // Manager manages all inbound handlers.

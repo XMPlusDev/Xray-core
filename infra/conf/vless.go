@@ -8,14 +8,14 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/protocol"
-	"github.com/xmplusdev/xray-core/v24/common/serial"
-	"github.com/xmplusdev/xray-core/v24/common/uuid"
-	"github.com/xmplusdev/xray-core/v24/proxy/vless"
-	"github.com/xmplusdev/xray-core/v24/proxy/vless/inbound"
-	"github.com/xmplusdev/xray-core/v24/proxy/vless/outbound"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/protocol"
+	"github.com/xmplusdev/xray-core/v25/common/serial"
+	"github.com/xmplusdev/xray-core/v25/common/uuid"
+	"github.com/xmplusdev/xray-core/v25/proxy/vless"
+	"github.com/xmplusdev/xray-core/v25/proxy/vless/inbound"
+	"github.com/xmplusdev/xray-core/v25/proxy/vless/outbound"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -186,7 +186,7 @@ func (c *VLessOutboundConfig) Build() (proto.Message, error) {
 			default:
 				return nil, errors.New(`VLESS users: "flow" doesn't support "` + account.Flow + `" in this version`)
 			}
-
+			
 			account.Encryption = "none"
 			if account.Encryption != "none" {
 				return nil, errors.New(`VLESS users: please add/set "encryption":"none" for every user`)

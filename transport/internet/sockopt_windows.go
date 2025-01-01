@@ -6,7 +6,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
 )
 
 const (
@@ -59,11 +59,6 @@ func applyOutboundSocketOptions(network string, address string, fd uintptr, conf
 		} else if config.TcpKeepAliveIdle < 0 {
 			if err := syscall.SetsockoptInt(syscall.Handle(fd), syscall.SOL_SOCKET, syscall.SO_KEEPALIVE, 0); err != nil {
 				return errors.New("failed to unset SO_KEEPALIVE", err)
-			}
-		}
-		if config.TcpNoDelay {
-			if err := syscall.SetsockoptInt(syscall.Handle(fd), syscall.IPPROTO_TCP, syscall.TCP_NODELAY, 1); err != nil {
-				return errors.New("failed to set TCP_NODELAY", err)
 			}
 		}
 	}

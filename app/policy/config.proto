@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package xray.app.policy;
 option csharp_namespace = "Xray.App.Policy";
-option go_package = "github.com/xmplusdev/xray-core/v24/app/policy";
+option go_package = "github.com/xmplusdev/xray-core/v25/app/policy";
 option java_package = "com.xray.app.policy";
 option java_multiple_files = true;
 

@@ -8,25 +8,25 @@ import (
 	"time"
 
 	"github.com/pires/go-proxyproto"
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/dice"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/platform"
-	"github.com/xmplusdev/xray-core/v24/common/retry"
-	"github.com/xmplusdev/xray-core/v24/common/session"
-	"github.com/xmplusdev/xray-core/v24/common/signal"
-	"github.com/xmplusdev/xray-core/v24/common/task"
-	"github.com/xmplusdev/xray-core/v24/core"
-	"github.com/xmplusdev/xray-core/v24/features/dns"
-	"github.com/xmplusdev/xray-core/v24/features/policy"
-	"github.com/xmplusdev/xray-core/v24/features/stats"
-	"github.com/xmplusdev/xray-core/v24/proxy"
-	"github.com/xmplusdev/xray-core/v24/transport"
-	"github.com/xmplusdev/xray-core/v24/transport/internet"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/stat"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/dice"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/platform"
+	"github.com/xmplusdev/xray-core/v25/common/retry"
+	"github.com/xmplusdev/xray-core/v25/common/session"
+	"github.com/xmplusdev/xray-core/v25/common/signal"
+	"github.com/xmplusdev/xray-core/v25/common/task"
+	"github.com/xmplusdev/xray-core/v25/core"
+	"github.com/xmplusdev/xray-core/v25/features/dns"
+	"github.com/xmplusdev/xray-core/v25/features/policy"
+	"github.com/xmplusdev/xray-core/v25/features/stats"
+	"github.com/xmplusdev/xray-core/v25/proxy"
+	"github.com/xmplusdev/xray-core/v25/transport"
+	"github.com/xmplusdev/xray-core/v25/transport/internet"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/tls"
 )
 
 var useSplice bool
@@ -419,7 +419,7 @@ func (w *NoisePacketWriter) WriteMultiBuffer(mb buf.MultiBuffer) error {
 			}
 			w.Writer.WriteMultiBuffer(buf.MultiBuffer{buf.FromBytes(noise)})
 
-			if n.DelayMin != 0 {
+			if n.DelayMin != 0 || n.DelayMax != 0 {
 				time.Sleep(time.Duration(randBetween(int64(n.DelayMin), int64(n.DelayMax))) * time.Millisecond)
 			}
 		}
@@ -506,7 +506,7 @@ func (f *FragmentWriter) Write(b []byte) (int, error) {
 	}
 }
 
-// stolen from github.com/xmplusdev/xray-core/v24/transport/internet/reality
+// stolen from github.com/xmplusdev/xray-core/v25/transport/internet/reality
 func randBetween(left int64, right int64) int64 {
 	if left == right {
 		return left

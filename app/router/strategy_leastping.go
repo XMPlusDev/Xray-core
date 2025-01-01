@@ -3,11 +3,11 @@ package router
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/v24/app/observatory"
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/core"
-	"github.com/xmplusdev/xray-core/v24/features/extension"
+	"github.com/xmplusdev/xray-core/v25/app/observatory"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/core"
+	"github.com/xmplusdev/xray-core/v25/features/extension"
 )
 
 type LeastPingStrategy struct {

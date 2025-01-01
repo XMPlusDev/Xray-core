@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	. "github.com/xmplusdev/xray-core/v24/common/net"
+	. "github.com/xmplusdev/xray-core/v25/common/net"
 )
 
 func TestAddressProperty(t *testing.T) {

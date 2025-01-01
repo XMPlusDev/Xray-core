@@ -5,8 +5,8 @@ import (
 	"io"
 	gonet "net"
 
-	"github.com/xmplusdev/xray-core/v24/transport/internet/browser_dialer"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/websocket"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/browser_dialer"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/websocket"
 )
 
 // implements splithttp.DialerClient in terms of browser dialer

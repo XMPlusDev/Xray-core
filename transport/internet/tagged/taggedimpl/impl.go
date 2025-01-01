@@ -3,13 +3,13 @@ package taggedimpl
 import (
 	"context"
 
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/net/cnc"
-	"github.com/xmplusdev/xray-core/v24/common/session"
-	"github.com/xmplusdev/xray-core/v24/core"
-	"github.com/xmplusdev/xray-core/v24/features/routing"
-	"github.com/xmplusdev/xray-core/v24/transport/internet/tagged"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/net/cnc"
+	"github.com/xmplusdev/xray-core/v25/common/session"
+	"github.com/xmplusdev/xray-core/v25/core"
+	"github.com/xmplusdev/xray-core/v25/features/routing"
+	"github.com/xmplusdev/xray-core/v25/transport/internet/tagged"
 )
 
 func DialTaggedOutbound(ctx context.Context, dispatcher routing.Dispatcher, dest net.Destination, tag string) (net.Conn, error) {

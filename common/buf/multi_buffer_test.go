@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xmplusdev/xray-core/v24/common"
-	. "github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common"
+	. "github.com/xmplusdev/xray-core/v25/common/buf"
 )
 
 func TestMultiBufferRead(t *testing.T) {

@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xmplusdev/xray-core/v24/common"
-	. "github.com/xmplusdev/xray-core/v24/transport/internet/kcp"
+	"github.com/xmplusdev/xray-core/v25/common"
+	. "github.com/xmplusdev/xray-core/v25/transport/internet/kcp"
 )
 
 func TestSimpleAuthenticator(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	. "github.com/xmplusdev/xray-core/v24/transport/internet/splithttp"
+	. "github.com/xmplusdev/xray-core/v25/transport/internet/splithttp"
 )
 
 type fakeRoundTripper struct{}

@@ -4,12 +4,12 @@ import (
 	"context"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/net/cnc"
-	"github.com/xmplusdev/xray-core/v24/common/signal/done"
-	"github.com/xmplusdev/xray-core/v24/transport"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/net/cnc"
+	"github.com/xmplusdev/xray-core/v25/common/signal/done"
+	"github.com/xmplusdev/xray-core/v25/transport"
 )
 
 // OutboundListener is a net.Listener for listening metrics http connections.

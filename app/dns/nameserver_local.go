@@ -5,11 +5,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/log"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/features/dns"
-	"github.com/xmplusdev/xray-core/v24/features/dns/localdns"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/log"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/features/dns"
+	"github.com/xmplusdev/xray-core/v25/features/dns/localdns"
 )
 
 // LocalNameServer is an wrapper over local DNS feature.

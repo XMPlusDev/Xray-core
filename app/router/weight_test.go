@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/xmplusdev/xray-core/v24/app/router"
+	"github.com/xmplusdev/xray-core/v25/app/router"
 )
 
 func TestWeight(t *testing.T) {

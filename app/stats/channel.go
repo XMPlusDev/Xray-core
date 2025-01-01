@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
 )
 
 // Channel is an implementation of stats.Channel.

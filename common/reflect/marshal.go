@@ -5,11 +5,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"reflect"
+	"slices"
 	"strings"
 
-	cnet "github.com/xmplusdev/xray-core/v24/common/net"
-	cserial "github.com/xmplusdev/xray-core/v24/common/serial"
-	"github.com/xmplusdev/xray-core/v24/infra/conf"
+	cnet "github.com/xmplusdev/xray-core/v25/common/net"
+	cserial "github.com/xmplusdev/xray-core/v25/common/serial"
+	"github.com/xmplusdev/xray-core/v25/infra/conf"
 )
 
 func MarshalToJson(v interface{}, insertTypeInfo bool) (string, bool) {
@@ -31,9 +32,6 @@ func JSONMarshalWithoutEscape(t interface{}) ([]byte, error) {
 }
 
 func marshalTypedMessage(v *cserial.TypedMessage, ignoreNullValue bool, insertTypeInfo bool) interface{} {
-	if v == nil {
-		return nil
-	}
 	tmsg, err := v.GetInstance()
 	if err != nil {
 		return nil
@@ -194,29 +192,28 @@ func marshalKnownType(v interface{}, ignoreNullValue bool, insertTypeInfo bool) 
 	}
 }
 
+var valueKinds = []reflect.Kind{
+	reflect.Bool,
+	reflect.Int,
+	reflect.Int8,
+	reflect.Int16,
+	reflect.Int32,
+	reflect.Int64,
+	reflect.Uint,
+	reflect.Uint8,
+	reflect.Uint16,
+	reflect.Uint32,
+	reflect.Uint64,
+	reflect.Uintptr,
+	reflect.Float32,
+	reflect.Float64,
+	reflect.Complex64,
+	reflect.Complex128,
+	reflect.String,
+}
+
 func isValueKind(kind reflect.Kind) bool {
-	switch kind {
-	case reflect.Bool,
-		reflect.Int,
-		reflect.Int8,
-		reflect.Int16,
-		reflect.Int32,
-		reflect.Int64,
-		reflect.Uint,
-		reflect.Uint8,
-		reflect.Uint16,
-		reflect.Uint32,
-		reflect.Uint64,
-		reflect.Uintptr,
-		reflect.Float32,
-		reflect.Float64,
-		reflect.Complex64,
-		reflect.Complex128,
-		reflect.String:
-		return true
-	default:
-		return false
-	}
+	return slices.Contains(valueKinds, kind)
 }
 
 func marshalInterface(v interface{}, ignoreNullValue bool, insertTypeInfo bool) interface{} {

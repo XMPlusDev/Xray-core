@@ -7,7 +7,7 @@
 package freedom
 
 import (
-	protocol "github.com/xmplusdev/xray-core/v24/common/protocol"
+	protocol "github.com/xmplusdev/xray-core/v25/common/protocol"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

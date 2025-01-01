@@ -4,15 +4,15 @@ import (
 	"context"
 	"testing"
 
-	"github.com/xmplusdev/xray-core/v24/app/dispatcher"
-	"github.com/xmplusdev/xray-core/v24/app/log"
-	. "github.com/xmplusdev/xray-core/v24/app/log/command"
-	"github.com/xmplusdev/xray-core/v24/app/proxyman"
-	_ "github.com/xmplusdev/xray-core/v24/app/proxyman/inbound"
-	_ "github.com/xmplusdev/xray-core/v24/app/proxyman/outbound"
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/serial"
-	"github.com/xmplusdev/xray-core/v24/core"
+	"github.com/xmplusdev/xray-core/v25/app/dispatcher"
+	"github.com/xmplusdev/xray-core/v25/app/log"
+	. "github.com/xmplusdev/xray-core/v25/app/log/command"
+	"github.com/xmplusdev/xray-core/v25/app/proxyman"
+	_ "github.com/xmplusdev/xray-core/v25/app/proxyman/inbound"
+	_ "github.com/xmplusdev/xray-core/v25/app/proxyman/outbound"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/serial"
+	"github.com/xmplusdev/xray-core/v25/core"
 )
 
 func TestLoggerRestart(t *testing.T) {

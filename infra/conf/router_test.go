@@ -9,13 +9,13 @@ import (
 	"time"
 	_ "unsafe"
 
-	"github.com/xmplusdev/xray-core/v24/app/router"
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/platform"
-	"github.com/xmplusdev/xray-core/v24/common/platform/filesystem"
-	"github.com/xmplusdev/xray-core/v24/common/serial"
-	. "github.com/xmplusdev/xray-core/v24/infra/conf"
+	"github.com/xmplusdev/xray-core/v25/app/router"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/platform"
+	"github.com/xmplusdev/xray-core/v25/common/platform/filesystem"
+	"github.com/xmplusdev/xray-core/v25/common/serial"
+	. "github.com/xmplusdev/xray-core/v25/infra/conf"
 	"google.golang.org/protobuf/proto"
 )
 

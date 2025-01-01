@@ -2,13 +2,14 @@ package conf
 
 import (
 	"encoding/json"
+	"fmt"
 	"strconv"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/net"
-	"github.com/xmplusdev/xray-core/v24/common/platform"
-	"github.com/xmplusdev/xray-core/v24/common/protocol"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/net"
+	"github.com/xmplusdev/xray-core/v25/common/platform"
+	"github.com/xmplusdev/xray-core/v25/common/protocol"
 )
 
 type StringList []string
@@ -256,6 +257,18 @@ type Int32Range struct {
 	Right int32
 	From  int32
 	To    int32
+}
+
+func (v Int32Range) MarshalJSON() ([]byte, error) {
+	return json.Marshal(v.String())
+}
+
+func (v Int32Range) String() string {
+	if v.Left == v.Right {
+		return strconv.Itoa(int(v.Left))
+	} else {
+		return fmt.Sprintf("%d-%d", v.Left, v.Right)
+	}
 }
 
 func (v *Int32Range) UnmarshalJSON(data []byte) error {

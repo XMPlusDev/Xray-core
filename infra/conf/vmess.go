@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	"github.com/xmplusdev/xray-core/v24/common/protocol"
-	"github.com/xmplusdev/xray-core/v24/common/serial"
-	"github.com/xmplusdev/xray-core/v24/common/uuid"
-	"github.com/xmplusdev/xray-core/v24/proxy/vmess"
-	"github.com/xmplusdev/xray-core/v24/proxy/vmess/inbound"
-	"github.com/xmplusdev/xray-core/v24/proxy/vmess/outbound"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	"github.com/xmplusdev/xray-core/v25/common/protocol"
+	"github.com/xmplusdev/xray-core/v25/common/serial"
+	"github.com/xmplusdev/xray-core/v25/common/uuid"
+	"github.com/xmplusdev/xray-core/v25/proxy/vmess"
+	"github.com/xmplusdev/xray-core/v25/proxy/vmess/inbound"
+	"github.com/xmplusdev/xray-core/v25/proxy/vmess/outbound"
 	"google.golang.org/protobuf/proto"
 )
 

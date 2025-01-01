@@ -9,11 +9,11 @@ import (
 	"io"
 
 	"github.com/xtls/quic-go/quicvarint"
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/buf"
-	"github.com/xmplusdev/xray-core/v24/common/bytespool"
-	"github.com/xmplusdev/xray-core/v24/common/errors"
-	ptls "github.com/xmplusdev/xray-core/v24/common/protocol/tls"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/bytespool"
+	"github.com/xmplusdev/xray-core/v25/common/errors"
+	ptls "github.com/xmplusdev/xray-core/v25/common/protocol/tls"
 	"golang.org/x/crypto/hkdf"
 )
 

@@ -1,9 +1,9 @@
 package routing
 
 import (
-	"github.com/xmplusdev/xray-core/v24/common"
-	"github.com/xmplusdev/xray-core/v24/common/serial"
-	"github.com/xmplusdev/xray-core/v24/features"
+	"github.com/xmplusdev/xray-core/v25/common"
+	"github.com/xmplusdev/xray-core/v25/common/serial"
+	"github.com/xmplusdev/xray-core/v25/features"
 )
 
 // Router is a feature to choose an outbound tag for the given request.
@@ -16,10 +16,6 @@ type Router interface {
 	PickRoute(ctx Context) (Route, error)
 	AddRule(config *serial.TypedMessage, shouldAppend bool) error
 	RemoveRule(tag string) error
-	// Add user routing rule
-	AddUserRule(tag string, email []string)
-	// Remove user routing rule
-	RemoveUserRule(email []string)
 }
 
 // Route is the routing result of Router feature.
@@ -68,12 +64,6 @@ func (DefaultRouter) AddRule(config *serial.TypedMessage, shouldAppend bool) err
 func (DefaultRouter) RemoveRule(tag string) error {
 	return common.ErrNoClue
 }
-
-// AddUsers implements Router.
-func (DefaultRouter) AddUserRule(tag string, email []string) {}
-
-// RemoveUsers implements Router.
-func (DefaultRouter) RemoveUserRule(email []string)          {}
 
 // Start implements common.Runnable.
 func (DefaultRouter) Start() error {

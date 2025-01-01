@@ -1,7 +1,7 @@
 package pipe
 
 import (
-	"github.com/xmplusdev/xray-core/v24/common/buf"
+	"github.com/xmplusdev/xray-core/v25/common/buf"
 )
 
 // Writer is a buf.Writer that writes data into a pipe.
