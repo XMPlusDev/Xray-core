@@ -8,7 +8,7 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/xtls/quic-go/quicvarint"
+	"github.com/quic-go/quic-go/quicvarint"
 	"github.com/xmplusdev/xray-core/v25/common"
 	"github.com/xmplusdev/xray-core/v25/common/buf"
 	"github.com/xmplusdev/xray-core/v25/common/bytespool"

@@ -51,9 +51,11 @@ func (c *TrojanClientConfig) Build() (proto.Message, error) {
 		if rec.Password == "" {
 			return nil, errors.New("Trojan password is not specified.")
 		}
+		/*
 		if rec.Flow != "" {
 			return nil, errors.PrintRemovedFeatureError(`Flow for Trojan`, ``)
 		}
+		*/
 
 		config.Server[idx] = &protocol.ServerEndpoint{
 			Address: rec.Address.Build(),

@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xtls/quic-go"
+	"github.com/quic-go/quic-go"
 	"github.com/xmplusdev/xray-core/v25/common"
 	"github.com/xmplusdev/xray-core/v25/common/buf"
 	"github.com/xmplusdev/xray-core/v25/common/errors"
