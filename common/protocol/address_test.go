@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/buf"
-	"github.com/xtls/xray-core/common/net"
-	. "github.com/xtls/xray-core/common/protocol"
+	"github.com/xmplusdev/xray-core/v26/common"
+	"github.com/xmplusdev/xray-core/v26/common/buf"
+	"github.com/xmplusdev/xray-core/v26/common/net"
+	. "github.com/xmplusdev/xray-core/v26/common/protocol"
 )
 
 func TestAddressReading(t *testing.T) {

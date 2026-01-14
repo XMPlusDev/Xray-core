@@ -3,11 +3,11 @@ package conf_test
 import (
 	"testing"
 
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/protocol"
-	. "github.com/xtls/xray-core/infra/conf"
-	"github.com/xtls/xray-core/proxy/freedom"
-	"github.com/xtls/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/v26/common/net"
+	"github.com/xmplusdev/xray-core/v26/common/protocol"
+	. "github.com/xmplusdev/xray-core/v26/infra/conf"
+	"github.com/xmplusdev/xray-core/v26/proxy/freedom"
+	"github.com/xmplusdev/xray-core/v26/transport/internet"
 )
 
 func TestFreedomConfig(t *testing.T) {

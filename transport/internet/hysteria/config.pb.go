@@ -181,7 +181,7 @@ const file_transport_internet_hysteria_config_proto_rawDesc = "" +
 	"\x10max_idle_timeout\x18\v \x01(\x03R\x0emaxIdleTimeout\x12*\n" +
 	"\x11keep_alive_period\x18\f \x01(\x03R\x0fkeepAlivePeriod\x12;\n" +
 	"\x1adisable_path_mtu_discovery\x18\r \x01(\bR\x17disablePathMtuDiscoveryB\x82\x01\n" +
-	"$com.xray.transport.internet.hysteriaP\x01Z5github.com/xtls/xray-core/transport/internet/hysteria\xaa\x02 Xray.Transport.Internet.Hysteriab\x06proto3"
+	"$com.xray.transport.internet.hysteriaP\x01Z5github.com/xmplusdev/xray-core/v26/transport/internet/hysteria\xaa\x02 Xray.Transport.Internet.Hysteriab\x06proto3"
 
 var (
 	file_transport_internet_hysteria_config_proto_rawDescOnce sync.Once

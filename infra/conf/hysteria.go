@@ -1,9 +1,9 @@
 package conf
 
 import (
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/proxy/hysteria"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
+	"github.com/xmplusdev/xray-core/v26/common/protocol"
+	"github.com/xmplusdev/xray-core/v26/proxy/hysteria"
 	"google.golang.org/protobuf/proto"
 )
 

@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/sagernet/sing/common/bufio"
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/buf"
-	"github.com/xtls/xray-core/transport"
+	"github.com/xmplusdev/xray-core/v26/common"
+	"github.com/xmplusdev/xray-core/v26/common/buf"
+	"github.com/xmplusdev/xray-core/v26/transport"
 )
 
 func CopyConn(ctx context.Context, inboundConn net.Conn, link *transport.Link, serverConn net.Conn) error {

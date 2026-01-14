@@ -12,7 +12,7 @@ import (
 
 	"golang.org/x/sys/windows"
 
-	"github.com/xtls/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
 )
 
 const (

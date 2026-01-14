@@ -8,11 +8,11 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/proxy/trojan"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
+	"github.com/xmplusdev/xray-core/v26/common/net"
+	"github.com/xmplusdev/xray-core/v26/common/protocol"
+	"github.com/xmplusdev/xray-core/v26/common/serial"
+	"github.com/xmplusdev/xray-core/v26/proxy/trojan"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -67,9 +67,9 @@ func (c *TrojanClientConfig) Build() (proto.Message, error) {
 		if rec.Password == "" {
 			return nil, errors.New("Trojan password is not specified.")
 		}
-		if rec.Flow != "" {
-			return nil, errors.PrintRemovedFeatureError(`Flow for Trojan`, ``)
-		}
+		//if rec.Flow != "" {
+		//	return nil, errors.PrintRemovedFeatureError(`Flow for Trojan`, ``)
+		//}
 
 		config.Server = &protocol.ServerEndpoint{
 			Address: rec.Address.Build(),

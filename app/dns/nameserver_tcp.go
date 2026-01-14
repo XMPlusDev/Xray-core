@@ -8,15 +8,15 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/xtls/xray-core/common/buf"
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/net/cnc"
-	"github.com/xtls/xray-core/common/protocol/dns"
-	"github.com/xtls/xray-core/common/session"
-	dns_feature "github.com/xtls/xray-core/features/dns"
-	"github.com/xtls/xray-core/features/routing"
-	"github.com/xtls/xray-core/transport/internet"
+	"github.com/xmplusdev/xray-core/v26/common/buf"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
+	"github.com/xmplusdev/xray-core/v26/common/net"
+	"github.com/xmplusdev/xray-core/v26/common/net/cnc"
+	"github.com/xmplusdev/xray-core/v26/common/protocol/dns"
+	"github.com/xmplusdev/xray-core/v26/common/session"
+	dns_feature "github.com/xmplusdev/xray-core/v26/features/dns"
+	"github.com/xmplusdev/xray-core/v26/features/routing"
+	"github.com/xmplusdev/xray-core/v26/transport/internet"
 )
 
 // TCPNameServer implemented DNS over TCP (RFC7766).

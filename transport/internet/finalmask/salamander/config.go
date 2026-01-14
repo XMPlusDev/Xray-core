@@ -3,8 +3,8 @@ package salamander
 import (
 	"net"
 
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/transport/internet/finalmask/salamander/obfs"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
+	"github.com/xmplusdev/xray-core/v26/transport/internet/finalmask/salamander/obfs"
 )
 
 func (c *Config) UDP() {

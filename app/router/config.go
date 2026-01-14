@@ -6,10 +6,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/platform/filesystem"
-	"github.com/xtls/xray-core/features/outbound"
-	"github.com/xtls/xray-core/features/routing"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
+	"github.com/xmplusdev/xray-core/v26/common/platform/filesystem"
+	"github.com/xmplusdev/xray-core/v26/features/outbound"
+	"github.com/xmplusdev/xray-core/v26/features/routing"
 	"google.golang.org/protobuf/proto"
 )
 

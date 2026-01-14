@@ -3,7 +3,7 @@ package tcp
 import (
 	"net/http"
 
-	"github.com/xtls/xray-core/common/net"
+	"github.com/xmplusdev/xray-core/v26/common/net"
 )
 
 type Server struct {

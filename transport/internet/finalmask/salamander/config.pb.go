@@ -72,7 +72,7 @@ const file_transport_internet_udpmask_salamander_config_proto_rawDesc = "" +
 	"2transport/internet/udpmask/salamander/config.proto\x12*xray.transport.internet.udpmask.salamander\"$\n" +
 	"\x06Config\x12\x1a\n" +
 	"\bpassword\x18\x01 \x01(\tR\bpasswordB\xa0\x01\n" +
-	".com.xray.transport.internet.udpmask.salamanderP\x01Z?github.com/xtls/xray-core/transport/internet/udpmask/salamander\xaa\x02*Xray.Transport.Internet.Udpmask.Salamanderb\x06proto3"
+	".com.xray.transport.internet.udpmask.salamanderP\x01Z?github.com/xmplusdev/xray-core/v26/transport/internet/udpmask/salamander\xaa\x02*Xray.Transport.Internet.Udpmask.Salamanderb\x06proto3"
 
 var (
 	file_transport_internet_udpmask_salamander_config_proto_rawDescOnce sync.Once

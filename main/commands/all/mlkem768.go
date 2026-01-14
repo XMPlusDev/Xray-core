@@ -6,7 +6,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/xtls/xray-core/main/commands/base"
+	"github.com/xmplusdev/xray-core/v26/main/commands/base"
 	"lukechampine.com/blake3"
 )
 

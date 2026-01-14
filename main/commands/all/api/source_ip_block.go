@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	routerService "github.com/xtls/xray-core/app/router/command"
-	cserial "github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/infra/conf/serial"
-	"github.com/xtls/xray-core/main/commands/base"
+	routerService "github.com/xmplusdev/xray-core/v26/app/router/command"
+	cserial "github.com/xmplusdev/xray-core/v26/common/serial"
+	"github.com/xmplusdev/xray-core/v26/infra/conf/serial"
+	"github.com/xmplusdev/xray-core/v26/main/commands/base"
 )
 
 var cmdSourceIpBlock = &base.Command{

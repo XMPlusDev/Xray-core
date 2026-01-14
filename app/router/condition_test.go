@@ -7,16 +7,16 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/xtls/xray-core/app/router"
-	. "github.com/xtls/xray-core/app/router"
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/common/protocol/http"
-	"github.com/xtls/xray-core/common/session"
-	"github.com/xtls/xray-core/features/routing"
-	routing_session "github.com/xtls/xray-core/features/routing/session"
-	"github.com/xtls/xray-core/infra/conf"
+	"github.com/xmplusdev/xray-core/v26/app/router"
+	. "github.com/xmplusdev/xray-core/v26/app/router"
+	"github.com/xmplusdev/xray-core/v26/common"
+	"github.com/xmplusdev/xray-core/v26/common/net"
+	"github.com/xmplusdev/xray-core/v26/common/protocol"
+	"github.com/xmplusdev/xray-core/v26/common/protocol/http"
+	"github.com/xmplusdev/xray-core/v26/common/session"
+	"github.com/xmplusdev/xray-core/v26/features/routing"
+	routing_session "github.com/xmplusdev/xray-core/v26/features/routing/session"
+	"github.com/xmplusdev/xray-core/v26/infra/conf"
 )
 
 func withBackground() routing.Context {

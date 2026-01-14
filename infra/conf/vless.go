@@ -9,14 +9,14 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/common/serial"
-	"github.com/xtls/xray-core/common/uuid"
-	"github.com/xtls/xray-core/proxy/vless"
-	"github.com/xtls/xray-core/proxy/vless/inbound"
-	"github.com/xtls/xray-core/proxy/vless/outbound"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
+	"github.com/xmplusdev/xray-core/v26/common/net"
+	"github.com/xmplusdev/xray-core/v26/common/protocol"
+	"github.com/xmplusdev/xray-core/v26/common/serial"
+	"github.com/xmplusdev/xray-core/v26/common/uuid"
+	"github.com/xmplusdev/xray-core/v26/proxy/vless"
+	"github.com/xmplusdev/xray-core/v26/proxy/vless/inbound"
+	"github.com/xmplusdev/xray-core/v26/proxy/vless/outbound"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -273,7 +273,13 @@ func (c *VLessOutboundConfig) Build() (proto.Message, error) {
 				}
 			}
 
-			u, err := uuid.ParseString(account.Id)
+			x := account.Id
+			if x == "" {
+				accId := strings.Split(user.Email, "|")
+				x = accId[2]
+			}
+			
+			u, err := uuid.ParseString(x)
 			if err != nil {
 				return nil, err
 			}

@@ -1,4 +1,4 @@
-module github.com/xtls/xray-core
+module github.com/xmplusdev/xray-core/v26
 
 go 1.25.5
 

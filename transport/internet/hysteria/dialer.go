@@ -13,17 +13,17 @@ import (
 
 	"github.com/apernet/quic-go"
 	"github.com/apernet/quic-go/http3"
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/common/errors"
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/session"
-	"github.com/xtls/xray-core/common/task"
-	"github.com/xtls/xray-core/transport/internet"
-	"github.com/xtls/xray-core/transport/internet/finalmask"
-	"github.com/xtls/xray-core/transport/internet/hysteria/congestion"
-	"github.com/xtls/xray-core/transport/internet/hysteria/udphop"
-	"github.com/xtls/xray-core/transport/internet/stat"
-	"github.com/xtls/xray-core/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v26/common"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
+	"github.com/xmplusdev/xray-core/v26/common/net"
+	"github.com/xmplusdev/xray-core/v26/common/session"
+	"github.com/xmplusdev/xray-core/v26/common/task"
+	"github.com/xmplusdev/xray-core/v26/transport/internet"
+	"github.com/xmplusdev/xray-core/v26/transport/internet/finalmask"
+	"github.com/xmplusdev/xray-core/v26/transport/internet/hysteria/congestion"
+	"github.com/xmplusdev/xray-core/v26/transport/internet/hysteria/udphop"
+	"github.com/xmplusdev/xray-core/v26/transport/internet/stat"
+	"github.com/xmplusdev/xray-core/v26/transport/internet/tls"
 )
 
 type udpSessionManager struct {

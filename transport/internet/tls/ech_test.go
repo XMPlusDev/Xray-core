@@ -7,7 +7,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/xtls/xray-core/common"
+	"github.com/xmplusdev/xray-core/v26/common"
 )
 
 func TestECHDial(t *testing.T) {

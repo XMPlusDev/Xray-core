@@ -3,13 +3,13 @@ package conf_test
 import (
 	"testing"
 
-	"github.com/xtls/xray-core/common/net"
-	"github.com/xtls/xray-core/common/protocol"
-	"github.com/xtls/xray-core/common/serial"
-	. "github.com/xtls/xray-core/infra/conf"
-	"github.com/xtls/xray-core/proxy/vmess"
-	"github.com/xtls/xray-core/proxy/vmess/inbound"
-	"github.com/xtls/xray-core/proxy/vmess/outbound"
+	"github.com/xmplusdev/xray-core/v26/common/net"
+	"github.com/xmplusdev/xray-core/v26/common/protocol"
+	"github.com/xmplusdev/xray-core/v26/common/serial"
+	. "github.com/xmplusdev/xray-core/v26/infra/conf"
+	"github.com/xmplusdev/xray-core/v26/proxy/vmess"
+	"github.com/xmplusdev/xray-core/v26/proxy/vmess/inbound"
+	"github.com/xmplusdev/xray-core/v26/proxy/vmess/outbound"
 )
 
 func TestVMessOutbound(t *testing.T) {

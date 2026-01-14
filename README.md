@@ -53,7 +53,7 @@
   - [XTLS/Xray-install](https://github.com/XTLS/Xray-install) (**Official**)
   - [tempest](https://github.com/team-cloudchaser/tempest) (supports [`systemd`](https://systemd.io) and [OpenRC](https://github.com/OpenRC/openrc); Linux-only)
 - Docker
-  - [ghcr.io/xtls/xray-core](https://ghcr.io/xtls/xray-core) (**Official**)
+  - [ghcr.io/xmplusdev/xray-core/v26](https://ghcr.io/xmplusdev/xray-core/v26) (**Official**)
   - [teddysun/xray](https://hub.docker.com/r/teddysun/xray)
   - [wulabing/xray_docker](https://github.com/wulabing/xray_docker)
 - Web Panel
@@ -186,13 +186,13 @@ CGO_ENABLED=0 go build -o xray -trimpath -buildvcs=false -ldflags="-s -w -buildi
 Make sure that you are using the same Go version, and remember to set the git commit id (7 bytes):
 
 ```bash
-CGO_ENABLED=0 go build -o xray -trimpath -buildvcs=false -gcflags="all=-l=4" -ldflags="-X github.com/xtls/xray-core/core.build=REPLACE -s -w -buildid=" -v ./main
+CGO_ENABLED=0 go build -o xray -trimpath -buildvcs=false -gcflags="all=-l=4" -ldflags="-X github.com/xmplusdev/xray-core/v26/core.build=REPLACE -s -w -buildid=" -v ./main
 ```
 
 If you are compiling a 32-bit MIPS/MIPSLE target, use this command instead:
 
 ```bash
-CGO_ENABLED=0 go build -o xray -trimpath -buildvcs=false -gcflags="-l=4" -ldflags="-X github.com/xtls/xray-core/core.build=REPLACE -s -w -buildid=" -v ./main
+CGO_ENABLED=0 go build -o xray -trimpath -buildvcs=false -gcflags="-l=4" -ldflags="-X github.com/xmplusdev/xray-core/v26/core.build=REPLACE -s -w -buildid=" -v ./main
 ```
 
 ## Stargazers over time

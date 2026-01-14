@@ -1,8 +1,8 @@
 package conf
 
 import (
-	"github.com/xtls/xray-core/app/version"
-	"github.com/xtls/xray-core/core"
+	"github.com/xmplusdev/xray-core/v26/app/version"
+	"github.com/xmplusdev/xray-core/v26/core"
 	"strconv"
 )
 

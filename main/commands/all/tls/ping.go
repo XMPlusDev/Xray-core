@@ -8,8 +8,8 @@ import (
 	"net"
 	"strconv"
 
-	"github.com/xtls/xray-core/main/commands/base"
-	. "github.com/xtls/xray-core/transport/internet/tls"
+	"github.com/xmplusdev/xray-core/v26/main/commands/base"
+	. "github.com/xmplusdev/xray-core/v26/transport/internet/tls"
 )
 
 // cmdPing is the tls ping command

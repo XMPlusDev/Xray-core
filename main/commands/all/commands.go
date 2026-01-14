@@ -1,10 +1,10 @@
 package all
 
 import (
-	"github.com/xtls/xray-core/main/commands/all/api"
-	"github.com/xtls/xray-core/main/commands/all/convert"
-	"github.com/xtls/xray-core/main/commands/all/tls"
-	"github.com/xtls/xray-core/main/commands/base"
+	"github.com/xmplusdev/xray-core/v26/main/commands/all/api"
+	"github.com/xmplusdev/xray-core/v26/main/commands/all/convert"
+	"github.com/xmplusdev/xray-core/v26/main/commands/all/tls"
+	"github.com/xmplusdev/xray-core/v26/main/commands/base"
 )
 
 func init() {

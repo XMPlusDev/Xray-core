@@ -1,9 +1,9 @@
 package hysteria
 
 import (
-	"github.com/xtls/xray-core/common"
-	"github.com/xtls/xray-core/transport/internet"
-	"github.com/xtls/xray-core/transport/internet/hysteria/padding"
+	"github.com/xmplusdev/xray-core/v26/common"
+	"github.com/xmplusdev/xray-core/v26/transport/internet"
+	"github.com/xmplusdev/xray-core/v26/transport/internet/hysteria/padding"
 )
 
 const (

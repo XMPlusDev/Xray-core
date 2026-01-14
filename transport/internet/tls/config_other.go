@@ -7,7 +7,7 @@ import (
 	"crypto/x509"
 	"sync"
 
-	"github.com/xtls/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
 )
 
 type rootCertsCache struct {

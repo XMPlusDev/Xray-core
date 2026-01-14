@@ -7,7 +7,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/xtls/xray-core/common/errors"
+	"github.com/xmplusdev/xray-core/v26/common/errors"
 	"golang.org/x/sys/unix"
 )
 
